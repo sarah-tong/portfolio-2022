@@ -1,0 +1,279 @@
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(charset="utf-8")
+
+    title Sarah Tong – UX Designer – Portfolio
+
+    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="css/normalize.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i")
+
+  body
+    div(class="grid-wrapper")
+      input(class="hamburger-menu-checkbox" type="checkbox")
+      div(class="nav-wrapper")
+        include top-of-nav.pug
+
+        nav(class="main-nav")
+          ul
+            li 
+              a(class="button-nav" href="index.html") Projects
+            li
+              a(class="button-nav" href="about.html") About
+            li
+              a(class="button-nav" target="_blank" href="http://www.sarahtong.ca/resume/Resume-SarahTong.pdf") Resume
+                
+      div(class="main-content-wrapper" id="style-guide")
+        
+        section
+          div(class="content-wrapper")  
+            h1 Style Guide
+            
+          section(id="interactive-elements")
+            div(class="content-wrapper")
+              h2 Interactive Elements
+
+            section
+              div(class="content-wrapper")
+                h3 In-text link
+                
+                h4 CSS selector
+                p .in-text-link
+
+                h4 Sample code:
+                code &lt;a href="#" class="in-text-link"&gt;In-text link&lt;/a&gt;
+                
+                h4 Rendered element:
+                a(class="in-text-link" href="#") In-text link
+              
+            section 
+              div(class="content-wrapper")             
+                h3 Navigation Button
+                
+                h4 CSS selector
+                p .button-nav
+
+                h4 Sample code:
+                code 
+                  | &lt;nav&gt; 
+                  br
+                  | &nbsp;&lt;ul&gt; 
+                  br
+                  | &nbsp;&nbsp;&lt;li&gt; 
+                  br
+                  | &nbsp;&nbsp;&nbsp;&lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;
+                  br
+                  | &nbsp;&nbsp;&lt;/li&gt;
+                  br
+                  | &nbsp;&lt;/ul&gt; 
+                  br
+                  | &lt;/nav&gt;
+                
+                h4 Rendered element:
+                nav
+                  ul
+                    li
+                      a(href="#" class="button-nav") Navigation Button
+            
+            section 
+              div(class="content-wrapper")             
+                h3 Logo Button
+                
+                h4 CSS selector
+                p .logo
+
+                h4 Sample code:
+                code 
+                  | &lt;div class="logo"&gt;
+                  br
+                  | &nbsp;&lt;a href="#"&gt;ST&lt;/a&gt;
+                  br
+                  | &lt;/div&gt;
+                
+                h4 Rendered element:
+                div(class="logo")
+                  a(href="#") ST
+                  
+            section 
+              div(class="content-wrapper")             
+                h3 Swiper Buttons
+                
+                h4 CSS selector
+                p .swiper-button-prev, .swiper-button-next
+
+                h4 Sample code:
+                code 
+                  | &lt;div class="swiper-button-prev"&gt; &amp;#8592;
+                  br
+                  | &lt;div class="swiper-button-next"&gt; &amp;#8594;
+                
+                h4 Rendered element:
+                div(class="swiper-button-prev") &#8592;
+                div(class="swiper-button-next") &#8594;
+              
+          section(id="text-elements")
+            div(class="content-wrapper")
+              h2 Text Elements
+
+            section
+              div(class="content-wrapper")
+                h3 H1 Heading
+                
+                h4 CSS selector
+                p h1
+
+                h4 Sample code:
+                code &lt;h1&gt;Heading 1&lt;/h1&gt;
+                
+                h4 Rendered element:
+                h1 Heading 1
+                
+            section
+              div(class="content-wrapper")
+                h3 H2 Heading
+                
+                h4 CSS selector
+                p h2
+
+                h4 Sample code:
+                code &lt;h2&gt;Heading 2&lt;/h2&gt;
+                
+                h4 Rendered element:
+                h2 Heading 2
+                
+            section
+              div(class="content-wrapper")
+                h3 H3 Heading
+                
+                h4 CSS selector
+                p h3
+
+                h4 Sample code:
+                code &lt;h3&gt;Heading 3&lt;/h3&gt;
+                
+                h4 Rendered element:
+                h3 Heading 3
+                
+            section
+              div(class="content-wrapper")
+                h3 H4 Heading
+                
+                h4 CSS selector
+                p h4
+
+                h4 Sample code:
+                code &lt;h4&gt;Heading 4&lt;/h4&gt;
+                
+                h4 Rendered element:
+                h4 Heading 4
+                
+            section
+              div(class="content-wrapper")
+                h3 Paragraphs
+                
+                h4 CSS selector
+                p p
+
+                h4 Sample code:
+                code &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                
+                h4 Rendered element:
+                p This is a paragraph.
+                
+            section
+              div(class="content-wrapper")
+                h3 Bulleted Lists
+                
+                h4 CSS selector
+                p ul
+
+                h4 Sample code:
+                code 
+                  | &lt;ul&gt;
+                  br
+                  | &nbsp;&lt;li&gt;List Item 1&lt;/li&gt;
+                  br
+                  | &nbsp;&lt;li&gt;List Item 2&lt;/li&gt;
+                  br
+                  | &nbsp;&lt;li&gt;List Item 3&lt;/li&gt;
+                  br
+                  | &lt;/ul&gt;
+                
+                h4 Rendered element:
+                ul
+                  li List Item 1
+                  li List Item 2
+                  li List Item 3
+                  
+              section
+                div(class="content-wrapper")
+                  h3 Numbered Lists
+                  
+                  h4 CSS selector
+                  p ol
+
+                  h4 Sample code:
+                  code 
+                    | &lt;ol&gt;
+                    br
+                    | &nbsp;&lt;li&gt;List Item 1&lt;/li&gt;
+                    br
+                    | &nbsp;&lt;li&gt;List Item 2&lt;/li&gt;
+                    br
+                    | &nbsp;&lt;li&gt;List Item 2&lt;/li&gt;
+                    br
+                    | &lt;/ol&gt;
+                  
+                  h4 Rendered element:
+                  ol
+                    li List Item 1
+                    li List Item 2
+                    li List Item 3
+          
+          section(id="combined-elements")
+            div(class="content-wrapper")
+              h2 Combined Elements
+
+            section
+              div(class="content-wrapper")
+                h3 Main Navigation
+                
+                nav(class="main-nav")
+                  ul
+                    li
+                      a(href="#" class="button-nav") Projects
+                    li
+                      a(href="#" class="button-nav") About
+                    li
+                      a(href="#" class="button-nav") Resume 
+                      
+            section
+              div(class="content-wrapper")
+                h3 Project Listing
+                
+                div(class="project-panel-wrapper" class="VIA-panel")
+                  a(href="via.html")
+                    img(src="img/VIA/VIA-train.jpg" alt="VIA train project image")
+                    div(class="blue-img-filter") 
+                    span(class="overlay")
+                    div(class="project-detail")
+                      div(class="project-label-background")
+                      p(class="project-number") 01
+                      span(class="line")
+                      p(class="project-name") Company
+                      p(class="category") Category   
+                      
+          section(id="color-palette")
+            div(class="content-wrapper")
+              h2 Color Palette
+
+            div(class="content-wrapper")
+              div(class="colour-swatch" id="coral")
+              div(class="colour-swatch" id="navy")
+              div(class="colour-swatch" id="black")
+            
+          include footer.pug
+                     
+    script(src="js/hamburger.js")
