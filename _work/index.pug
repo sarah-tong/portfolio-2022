@@ -33,6 +33,35 @@ html(lang="en")
                     br
                     | I’m a UX designer with an eye for design details and the bigger business picture.
                     
-        
+        div(class="swiper-container project-carousel container")
+            div(class="swiper-wrapper")
+            
+                div(class="swiper-slide project-wrapper")
+                    p(class="project-name") VIA RAIL
+                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                    P(class="project-category") #InterfaceDesign
+
+                div(class="swiper-slide project-wrapper")
+                    p(class="project-name") TOYOTA
+                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                    P(class="project-category") #InterfaceDesign 
+
+                div(class="swiper-slide project-wrapper")
+                    p(class="project-name") MISSION POSSIBLE
+                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                    P(class="project-category") #Branding
+
+                div(class="swiper-slide project-wrapper")
+                    p(class="project-name") VIA RAIL
+                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                    P(class="project-category") #InterfaceDesign
                     
+            div(class="swiper-button-prev")
+            div(class="swiper-button-next")
+            
+        div(class="container")
+            include footer.pug
+                    
+
         script(src="js/swiper.min.js")
+        script(src="js/swiper-initialize.js")
