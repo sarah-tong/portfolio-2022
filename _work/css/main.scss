@@ -1,18 +1,21 @@
 $coral: #ED534C;
 $dark-grey: #404041;
+$light-grey: #A6A8AB;
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
-p, a {
+p,
+a {
     color: $dark-grey;
 }
 
 .container {
     display: block;
-    margin: 0 4rem;
+    position: relative;
+    margin: 0 15rem;
 }
 
 .navbar {
@@ -21,7 +24,7 @@ p, a {
     align-items: center;
 
     & .logo {
-        padding: 1rem 0;
+        padding: 2rem 0;
 
         & a {
             text-decoration: none;
@@ -37,7 +40,11 @@ p, a {
 
         & li {
             display: inline-block;
-            padding: 1rem;
+            padding: 2rem 0;
+
+            &:first-child {
+                margin-right: 2rem;
+            }
 
             & a {
                 text-decoration: none;
@@ -62,7 +69,83 @@ p, a {
     & .brief-bio {
         font-family: 'Playfair Display';
         font-weight: 900;
-        font-size: 3rem;
+        font-size: 4rem;
         line-height: 1.25;
+    }
+}
+
+.project-carousel {
+    margin: 0 21rem 0 15rem;
+    padding-bottom: 4rem;
+
+    & .project-wrapper {
+
+        & .project-name {
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        & .project-category {
+            color: $light-grey;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 1480px) {
+    .container {
+        margin: 0 8rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    .hero-banner {
+        height: 50vh;
+
+        .brief-bio {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+@media (max-width: 1085px) {
+    .container {
+        margin: 0 5rem;
+    }
+
+    .hero-banner .brief-bio {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 0 3rem;
+    }
+
+    .hero-banner .brief-bio {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 475px) {
+    .container {
+        margin: 0 1rem;
+    }
+
+    .hero-banner {
+        height: 50vh;
+
+        & .brief-bio {
+            font-size: 2rem;
+        }
     }
 }
