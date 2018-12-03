@@ -2,9 +2,23 @@ $coral: #ED534C;
 $dark-grey: #404041;
 $light-grey: #A6A8AB;
 
+// background colors
+$muted-blue: #C5D1DF;
+$muted-red: #F6E7E2;
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
+    z-index: -9;
+    transition: background-color 0.5s;
+
+    &.blue {
+        background-color: $muted-blue;
+    }
+
+    &.red {
+        background-color: $muted-red;
+    }
 }
 
 p,
@@ -24,7 +38,7 @@ a {
     align-items: center;
 
     & .logo {
-        padding: 2rem 0;
+        padding: 1rem 0;
 
         & a {
             text-decoration: none;
@@ -40,7 +54,7 @@ a {
 
         & li {
             display: inline-block;
-            padding: 2rem 0;
+            padding: 1rem 0;
 
             &:first-child {
                 margin-right: 2rem;
@@ -61,16 +75,71 @@ a {
 
 .hero-banner {
     display: flex;
-    height: 60vh;
+    height: 50vh;
     justify-content: center;
     align-items: center;
-
+    margin: 2rem 0;
 
     & .brief-bio {
         font-family: 'Playfair Display';
         font-weight: 900;
         font-size: 4rem;
         line-height: 1.25;
+        margin: 0;
+        display: show;
+
+        &.hide {
+            display: none;
+        }
+    }
+}
+
+.VIA-photo-popup {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: inherit;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: width 0.25s, opacity 0.25s;
+
+    & img {
+        width: 150%;
+        height: auto;
+        position: relative;
+        top: -1.5rem;
+    }
+
+    &.show {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.toyota-photo-popup {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: inherit;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    ;
+    opacity: 0;
+    transition: width 0.25s, opacity 0.25s;
+
+    & img {
+        width: 150%;
+        height: auto;
+        position: relative;
+    }
+
+    &.show {
+        width: 100%;
+        opacity: 1;
+        display: flex;
     }
 }
 
@@ -79,6 +148,15 @@ a {
     padding-bottom: 4rem;
 
     & .project-wrapper {
+        transition: margin 0.25s;
+
+        & a {
+            text-decoration: none;
+        }
+
+        & p {
+            transition: color 0.25s;
+        }
 
         & .project-name {
             font-size: 1.15rem;
@@ -87,6 +165,28 @@ a {
 
         & .project-category {
             color: $light-grey;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0;
+            background-color: $coral;
+            transform: rotate(180deg);
+            transition: height 0.25s;
+        }
+
+        &:hover {
+            margin-top: -1rem;
+
+            & p {
+                color: $coral;
+            }
+
+            &:after {
+                height: 0.25rem;
+            }
         }
     }
 }
@@ -108,8 +208,7 @@ footer {
     }
 
     .hero-banner {
-        height: 50vh;
-
+        //        height: 50vh;
         .brief-bio {
             font-size: 3.5rem;
         }
