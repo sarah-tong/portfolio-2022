@@ -9,16 +9,25 @@ var viaBanner = document.querySelector(".VIA-photo-popup");
 var toyotaBrief = document.querySelector(".toyota-brief");
 var toyotaBanner = document.querySelector(".toyota-photo-popup");
 
+var railyardBrief = document.querySelector(".railyard-brief");
+var railyardBanner = document.querySelector(".railyard-photo-popup");
+
+var intlCoopBrief = document.querySelector(".intl-coop-brief");
+var intlCoopBanner = document.querySelector(".intl-coop-photo-popup");
+
+var smaBrief = document.querySelector(".sma-brief");
+var smaBanner = document.querySelector(".sma-photo-popup");
+
 viaBrief.onmouseover = function () {
     viaBanner.classList.add('show');
     homepageBio.classList.add('hide');
-    document.body.classList.add('blue');
+    document.body.classList.add('blue-grey');
 };
 
 viaBrief.onmouseout = function () {
     viaBanner.classList.remove('show');
     homepageBio.classList.remove('hide');
-    document.body.classList.remove('blue');
+    document.body.classList.remove('blue-grey');
 }
 
 toyotaBrief.onmouseover = function () {
@@ -31,4 +40,40 @@ toyotaBrief.onmouseout = function () {
     toyotaBanner.classList.remove('show');
     homepageBio.classList.remove('hide');
     document.body.classList.remove('red');
+}
+
+railyardBrief.onmouseover = function () {
+    railyardBanner.classList.add('show');
+    homepageBio.classList.add('hide');
+    document.body.classList.add('orange');
+};
+
+railyardBrief.onmouseout = function () {
+    railyardBanner.classList.remove('show');
+    homepageBio.classList.remove('hide');
+    document.body.classList.remove('orange');
+}
+
+intlCoopBrief.onmouseover = function () {
+    intlCoopBanner.classList.add('show');
+    homepageBio.classList.add('hide');
+    document.body.classList.add('sfu-red');
+};
+
+intlCoopBrief.onmouseout = function () {
+    intlCoopBanner.classList.remove('show');
+    homepageBio.classList.remove('hide');
+    document.body.classList.remove('sfu-red');
+}
+
+smaBrief.onmouseover = function () {
+    smaBanner.classList.add('show');
+    homepageBio.classList.add('hide');
+    document.body.classList.add('blue');
+};
+
+smaBrief.onmouseout = function () {
+    smaBanner.classList.remove('show');
+    homepageBio.classList.remove('hide');
+    document.body.classList.remove('blue');
 }

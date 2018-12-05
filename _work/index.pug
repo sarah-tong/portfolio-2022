@@ -36,7 +36,13 @@ html(lang="en")
                     img(src="img/VIA/website-static.png" alt="website preview with the words '6 Ways to Feel Canada' ")
                 div(class="toyota-photo-popup")
                     img(src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys")
-                    
+                div(class="railyard-photo-popup")
+                    img(src="img/Railyard/Railyard-Logo.png" alt="railyard logo")
+                div(class="intl-coop-photo-popup")
+                    img(src="img/Intl-Coop/Intl Co-op Info Session Banner - Fall 2016-01.jpg" alt="photo of person on a mountain")
+                div(class="sma-photo-popup")
+                    img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
+                                
         div(class="swiper-container project-carousel container")
             div(class="swiper-wrapper")
             
@@ -47,22 +53,34 @@ html(lang="en")
                         P(class="project-category") #InterfaceDesign
 
                 div(class="swiper-slide project-wrapper toyota-brief")
-                    p(class="project-name") TOYOTA
-                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                    P(class="project-category") #InterfaceDesign
+                    a(href="#")
+                        p(class="project-name") TOYOTA
+                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                        P(class="project-category") #InterfaceDesign
 
-                div(class="swiper-slide project-wrapper")
-                    p(class="project-name") MISSION POSSIBLE
-                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                    P(class="project-category") #Branding
-
-                div(class="swiper-slide project-wrapper")
-                    p(class="project-name") VIA RAIL
-                    p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                    P(class="project-category") #InterfaceDesign
-                    
-            div(class="swiper-button-prev")
-            div(class="swiper-button-next")
+                div(class="swiper-slide project-wrapper railyard-brief")
+                    a(href="#")
+                        p(class="project-name") Railyard Labs @
+                            br
+                            | Dossier Creative
+                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                        P(class="project-category") #Branding
+                        
+                div(class="swiper-slide project-wrapper intl-coop-brief")
+                    a(href="#")
+                        p(class="project-name") International Co-op
+                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                        P(class="project-category") #Marketing #VisualDesign
+                        
+                div(class="swiper-slide project-wrapper sma-brief")
+                    a(href="#")
+                        p(class="project-name") Student Marketing Association
+                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                        P(class="project-category") #Marketing #VisualDesign
+                        
+        div(class="arrow-container")     
+            div(class="swiper-button-prev") &#8592;
+            div(class="swiper-button-next") &#8594;
             
         div(class="container")
             include footer.pug
