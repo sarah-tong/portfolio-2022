@@ -396,9 +396,3 @@ footer {
       left: -1rem; }
     100% {
       left: -0.5rem; } } }
-
-@media (hover: none) {
-  .swiper-button-prev.swiper-button-disabled,
-  .swiper-button-next.swiper-button-disabled {
-    -webkit-animation: none;
-    animation: none; } }

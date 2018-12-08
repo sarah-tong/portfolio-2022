@@ -440,10 +440,3 @@ footer {
         }
     }
 }
-
-@media(hover:none) {
-    .swiper-button-prev.swiper-button-disabled,
-    .swiper-button-next.swiper-button-disabled {
-        animation: none;
-    }
-}
