@@ -9,12 +9,13 @@
  *
  * Released on: November 1, 2018
  */
+
 .swiper-container {
     /*    margin: 0 auto;*/
     position: relative;
     overflow: hidden;
     list-style: none;
-/*    padding: 0;*/
+    /*    padding: 0;*/
     /* Fix of Webkit flickering */
     z-index: 1;
 }
@@ -86,7 +87,7 @@
     transition-property: transform, -webkit-transform;
 
     /* custom */
-/*    margin-right: 2rem;*/
+    /*    margin-right: 2rem;*/
 }
 
 .swiper-slide-invisible-blank {
@@ -94,6 +95,7 @@
 }
 
 /* Auto Height */
+
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
     height: auto;
@@ -112,6 +114,7 @@
 }
 
 /* 3D Effects */
+
 .swiper-container-3d {
     -webkit-perspective: 1200px;
     perspective: 1200px;
@@ -170,6 +173,7 @@
 }
 
 /* IE10 Windows Phone 8 Fixes */
+
 .swiper-container-wp8-horizontal,
 .swiper-container-wp8-horizontal > .swiper-wrapper {
     -ms-touch-action: pan-y;
@@ -182,20 +186,29 @@
     touch-action: pan-x;
 }
 
+.swiper-container-rtl {}
+
 .swiper-button-prev,
 .swiper-button-next {
     position: absolute;
     top: 50%;
+    /*
     width: 27px;
     height: 44px;
     margin-top: -22px;
+*/
     z-index: 10;
     cursor: pointer;
-/*
+    /*
     background-size: 27px 44px;
     background-position: center;
     background-repeat: no-repeat;
 */
+    /* custom */
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -2rem;
+    padding: 0.5rem;
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -203,23 +216,35 @@
     opacity: 0.35;
     cursor: auto;
     pointer-events: none;
+    animation: none;
 }
 
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-/*    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");*/
-    left: 10px;
+    /*    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");*/
+    /*    left: 10px;*/
     right: auto;
-    
+    /* custom */
+    left: -5rem;
+    font-size: 1.25rem;
+}
+
+.swiper-button-prev:hover {
+    animation: arrow-bounce-prev ease-in-out 2s infinite;
 }
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-/*    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");*/
-/*    right: 10px;*/
+    /*    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");*/
+    /*    right: 10px;*/
     left: auto;
-/* custom */
-    right: 0;
+    /* custom */
+    right: -3rem;
+    font-size: 1.25rem;
+}
+
+.swiper-button-next:hover {
+    animation: arrow-bounce-next ease-in-out 2s infinite;
 }
 
 .swiper-button-prev.swiper-button-white,
@@ -262,6 +287,7 @@
 }
 
 /* Common Styles */
+
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
@@ -271,6 +297,7 @@
 }
 
 /* Bullets */
+
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0;
@@ -406,6 +433,7 @@ button.swiper-pagination-bullet {
 }
 
 /* Progress */
+
 .swiper-pagination-progressbar {
     background: rgba(0, 0, 0, 0.25);
     position: absolute;
@@ -477,6 +505,7 @@ button.swiper-pagination-bullet {
 }
 
 /* Scrollbar */
+
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
@@ -552,6 +581,7 @@ button.swiper-pagination-bullet {
 }
 
 /* Preloader */
+
 .swiper-lazy-preloader {
     width: 42px;
     height: 42px;
@@ -598,6 +628,7 @@ button.swiper-pagination-bullet {
 }
 
 /* a11y */
+
 .swiper-container .swiper-notification {
     position: absolute;
     left: 0;
@@ -723,4 +754,30 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
     /* Windows 8 IE 10 fix */
     -ms-perspective: 1200px;
+}
+
+@media (max-width: 1085px) {
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: -4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: -0.5rem;
+    }
+
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: -0.5rem;
+    }
+}
+
+@media(any-pointer: coarse) {
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        animation: none;
+    }
 }

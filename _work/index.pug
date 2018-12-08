@@ -7,14 +7,13 @@ html(lang="en")
         meta(charset="utf-8")
 
         title Sarah Tong – UX Designer – Portfolio
-
+        
+        link(rel="stylesheet" href="css/swiper.css")
+        
         link(rel="stylesheet" href="css/normalize.css")
         link(rel="stylesheet" href="css/main.css")
         
         link(href="https://fonts.googleapis.com/css?family=Lato:400,900|Playfair+Display:900")
-        
-        link(rel="stylesheet" href="css/swiper.css")
-    
 
     body
         div(class="container")
@@ -43,44 +42,44 @@ html(lang="en")
                 div(class="sma-photo-popup")
                     img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
                                 
-        div(class="swiper-container project-carousel container")
-            div(class="swiper-wrapper")
-            
-                div(class="swiper-slide project-wrapper VIA-brief")
-                    a(href="#")
-                        p(class="project-name") VIA RAIL
-                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                        P(class="project-category") #InterfaceDesign
-
-                div(class="swiper-slide project-wrapper toyota-brief")
-                    a(href="#")
-                        p(class="project-name") TOYOTA
-                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                        P(class="project-category") #InterfaceDesign
-
-                div(class="swiper-slide project-wrapper railyard-brief")
-                    a(href="#")
-                        p(class="project-name") Railyard Labs @
-                            br
-                            | Dossier Creative
-                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                        P(class="project-category") #Branding
-                        
-                div(class="swiper-slide project-wrapper intl-coop-brief")
-                    a(href="#")
-                        p(class="project-name") International Co-op
-                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                        P(class="project-category") #Marketing #VisualDesign
-                        
-                div(class="swiper-slide project-wrapper sma-brief")
-                    a(href="#")
-                        p(class="project-name") Student Marketing Association
-                        p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
-                        P(class="project-category") #Marketing #VisualDesign
-                        
-        div(class="arrow-container")     
+        div(class="container")
             div(class="swiper-button-prev") &#8592;
             div(class="swiper-button-next") &#8594;
+            
+            div(class="swiper-container project-carousel")
+                div(class="swiper-wrapper")
+
+                    div(class="swiper-slide project-wrapper VIA-brief")
+                        a(href="#")
+                            p(class="project-name") VIA RAIL
+                            p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                            P(class="project-category") #InterfaceDesign
+
+                    div(class="swiper-slide project-wrapper toyota-brief")
+                        a(href="#")
+                            p(class="project-name") TOYOTA
+                            p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                            P(class="project-category") #InterfaceDesign
+
+                    div(class="swiper-slide project-wrapper railyard-brief")
+                        a(href="#")
+                            p(class="project-name") Railyard Labs @
+                                br
+                                | Dossier Creative
+                            p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                            P(class="project-category") #Branding
+
+                    div(class="swiper-slide project-wrapper intl-coop-brief")
+                        a(href="#")
+                            p(class="project-name") International Co-op
+                            p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                            P(class="project-category") #Marketing #VisualDesign
+
+                    div(class="swiper-slide project-wrapper sma-brief")
+                        a(href="#")
+                            p(class="project-name") Student Marketing Association
+                            p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
+                            P(class="project-category") #Marketing #VisualDesign            
             
         div(class="container")
             include footer.pug

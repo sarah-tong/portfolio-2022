@@ -1,6 +1,9 @@
 var mySwiper = new Swiper('.swiper-container', {
 
     loop: false,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 150,
 
     // Navigation arrows
     navigation: {
@@ -34,6 +37,13 @@ var mySwiper = new Swiper('.swiper-container', {
             slidesPerGroup: 2,
             spaceBetween: 50,
         },
+
+        640: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+        },
+
         475: {
             slidesPerView: 1,
             slidesPerGroup: 1,

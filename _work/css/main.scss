@@ -22,15 +22,15 @@ body {
     &.red {
         background-color: $muted-red;
     }
-    
+
     &.sfu-red {
         background-color: $muted-sfu-red;
     }
-    
+
     &.orange {
         background-color: $muted-orange;
     }
-    
+
     &.blue {
         background-color: $muted-blue;
     }
@@ -237,11 +237,10 @@ a {
 }
 
 .project-carousel {
-//    margin: 0 21rem 0 15rem;
-    padding-bottom: 4rem;
+    margin: 0 4rem 4rem 0;
 
     & .project-wrapper {
-        transition: margin 0.25s;
+        transition: transform 0.25s;
 
         & a {
             text-decoration: none;
@@ -259,20 +258,17 @@ a {
 
         & .project-category {
             color: $light-grey;
-        }
-
-//        &:after {
-//            content: "";
-//            display: block;
-//            width: 100%;
-//            height: 0;
-//            background-color: $coral;
-//            transform: rotate(180deg);
-//            transition: height 0.25s;
-//        }
-
+        } //        &:after {
+        //            content: "";
+        //            display: block;
+        //            width: 100%;
+        //            height: 0;
+        //            background-color: $coral;
+        //            transform: rotate(180deg);
+        //            transition: height 0.25s;
+        //        }
         &:hover {
-            margin-top: -1rem;
+            transform: translateY(-1rem);
 
             & p {
                 color: $coral;
@@ -285,15 +281,41 @@ a {
     }
 }
 
-.arrow-container {
-    position: relative;
-}
-
 footer {
     text-align: center;
     font-size: 0.75rem;
+
+    & p {
+        color: $light-grey;
+    }
 }
 
+// keyframes
+@keyframes arrow-bounce-next {
+    0% {
+        right: -3rem;
+    }
+    50% {
+        right: -4rem;
+    }
+    100% {
+        right: -3rem;
+    }
+}
+
+@keyframes arrow-bounce-prev {
+    0% {
+        left: -5rem;
+    }
+    50% {
+        left: -6rem;
+    }
+    100% {
+        left: -5rem;
+    }
+}
+
+// media queries
 @media (max-width: 1480px) {
     .container {
         margin: 0 8rem;
@@ -315,21 +337,65 @@ footer {
 
 @media (max-width: 1085px) {
     .container {
-        margin: 0 5rem;
+        margin: 0 7rem;
     }
 
     .hero-banner .brief-bio {
         font-size: 3rem;
     }
+
+    .project-carousel {
+        margin: 0 2rem 4rem 0;
+    }
+
+    @keyframes arrow-bounce-prev {
+        0% {
+            left: -4rem;
+        }
+        50% {
+            left: -5rem;
+        }
+        100% {
+            left: -4rem;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .container {
-        margin: 0 3rem;
+        margin: 0 2rem;
     }
 
     .hero-banner .brief-bio {
         font-size: 2.5rem;
+    }
+
+    .project-carousel {
+        margin: 0 4rem 4rem;
+    }
+
+    @keyframes arrow-bounce-next {
+        0% {
+            right: -0.5rem;
+        }
+        50% {
+            right: -1.5rem;
+        }
+        100% {
+            right: -0.5rem;
+        }
+    }
+
+    @keyframes arrow-bounce-prev {
+        0% {
+            left: -0.5rem;
+        }
+        50% {
+            left: -1.5rem;
+        }
+        100% {
+            left: -0.5rem;
+        }
     }
 }
 
@@ -344,5 +410,40 @@ footer {
         & .brief-bio {
             font-size: 2rem;
         }
+    }
+
+    .project-carousel {
+        margin: 0 3rem 4rem;
+    }
+
+    @keyframes arrow-bounce-next {
+        0% {
+            right: -0.5rem;
+        }
+        50% {
+            right: -1rem;
+        }
+        100% {
+            right: -0.5rem;
+        }
+    }
+
+    @keyframes arrow-bounce-prev {
+        0% {
+            left: -0.5rem;
+        }
+        50% {
+            left: -1rem;
+        }
+        100% {
+            left: -0.5rem;
+        }
+    }
+}
+
+@media(hover:none) {
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        animation: none;
     }
 }
