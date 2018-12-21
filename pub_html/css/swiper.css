@@ -217,6 +217,10 @@
     cursor: auto;
     pointer-events: none;
     animation: none;
+    
+    &:hover {
+        
+    }
 }
 
 .swiper-button-prev,
