@@ -17,7 +17,8 @@ html(lang="en")
 
     body
         
-        div(class="loader")
+        div(class="loader-container")
+            span(class="loader")
                     
         div(class="page-content animate-bottom")
         
@@ -63,7 +64,7 @@ html(lang="en")
                     div(class="swiper-wrapper")
 
                         div(class="swiper-slide project-wrapper VIA-brief")
-                            a(href="via-rail.html" onclick="javascript:document.getElementById('page-loader')")
+                            a(href="via-rail.html")
                                 p(class="project-name") VIA RAIL
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") UX/UI Design
@@ -99,7 +100,7 @@ html(lang="en")
             div(class="container")
                 include footer.pug
                     
+        script(src="js/page-loader.js")
         script(src="js/swiper.min.js")
         script(src="js/swiper-initialize.js")
         script(src="js/hero-banner.js")
-        script(src="js/page-loader.js")

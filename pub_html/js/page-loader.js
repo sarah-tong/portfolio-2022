@@ -1,12 +1,36 @@
 var loaderAnimation;
+var loader = document.querySelector(".loader");
+var pageContent = document.querySelector(".page-content");;
 
-function myFunction() {
-    loaderAnimation = setTimeout(showPage, 1000);
+
+
+//document.getElementsByTagName('a').onclick = function (e) {
+//    e.preventDefault();
+
+//    setTimeout(function (url) {
+//        window.location = url
+//    }, 5000, this.href);
+//};
+
+
+// https://stackoverflow.com/questions/8492344/javascript-attach-an-onclick-event-to-all-links
+// https://stackoverflow.com/questions/36125391/vanilla-js-delay-click-event-to-add-animation
+var links = document.getElementsByTagName('a');
+for (var i = 0; i < links.length; i++) links[i].onclick = function (e) {
+    e.preventDefault(links[i]);
+    loader.classList.add('show');
+    setTimeout(function (url) {
+        window.location = url
+    }, 1500, this.href);
 }
 
-function showPage() {
-    document.querySelector('loader').classList.add('hide');
-    document.querySelector('page-content').classList.add('show');
-}
+// https://www.w3schools.com/howto/howto_css_loader.asp
+document.addEventListener('DOMContentLoaded', function () {
+    loader.classList.add('show');
+    loaderAnimation = setTimeout(showPage, 1500);
 
-console.log("detected!");
+    function showPage() {
+        loader.classList.remove('show');
+//        pageContent.classList.add('show');
+    }
+});
