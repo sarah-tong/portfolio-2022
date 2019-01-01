@@ -3,16 +3,6 @@ var loader = document.querySelector(".loader");
 var pageContent = document.querySelector(".page-content");;
 
 
-
-//document.getElementsByTagName('a').onclick = function (e) {
-//    e.preventDefault();
-
-//    setTimeout(function (url) {
-//        window.location = url
-//    }, 5000, this.href);
-//};
-
-
 // https://stackoverflow.com/questions/8492344/javascript-attach-an-onclick-event-to-all-links
 // https://stackoverflow.com/questions/36125391/vanilla-js-delay-click-event-to-add-animation
 var links = document.getElementsByTagName('a');

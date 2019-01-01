@@ -17,8 +17,12 @@ html(lang="en")
 
     body
         
-        div(class="loader-container")
-            span(class="loader")
+        //div(class="loader-container")
+            div(class="loader")
+                div(class="circle1")
+                div(class="circle2")
+                div(class="circle3")
+                
                     
         div(class="page-content animate-bottom")
         
@@ -45,18 +49,21 @@ html(lang="en")
                         | Hello there, I’m Sarah.
                         br
                         | I’m a UX designer with an eye for design details and the bigger business picture.
-                    div(class="VIA-photo-popup")
+                    p(class="mobile-brief-bio") Hello there, I’m Sarah. I’m a UX designer with an eye for design details and the bigger business picture.
+                    div(class="down-arrow-container")
+                        a(href="#carousel" class="down-arrow") &#8595;
+                    div(class="VIA-image-popup")
                         img(src="img/VIA/website-static.png" alt="website preview with the words '6 Ways to Feel Canada' ")
-                    div(class="toyota-photo-popup")
+                    div(class="toyota-image-popup")
                         img(src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys")
-                    div(class="railyard-photo-popup")
+                    div(class="railyard-image-popup")
                         img(src="img/Railyard/Railyard-Logo.png" alt="railyard logo")
-                    div(class="intl-coop-photo-popup")
+                    div(class="intl-coop-image-popup")
                         img(src="img/Intl-Coop/Intl Co-op Info Session Banner - Fall 2016-01.jpg" alt="photo of person on a mountain")
-                    div(class="sma-photo-popup")
+                    div(class="sma-image-popup")
                         img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
 
-            div(class="container")
+            div(class="container" id="carousel")
                 div(class="swiper-button-prev") &#8592;
                 div(class="swiper-button-next") &#8594;
 
@@ -64,18 +71,24 @@ html(lang="en")
                     div(class="swiper-wrapper")
 
                         div(class="swiper-slide project-wrapper VIA-brief")
+                            div(class="VIA-mobile-carousel-image")
+                                img(src="img/VIA/website-static.png" alt="website preview with the words '6 Ways to Feel Canada'")
                             a(href="via-rail.html")
                                 p(class="project-name") VIA RAIL
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") UX/UI Design
 
                         div(class="swiper-slide project-wrapper toyota-brief")
+                            div(class="toyota-mobile-carousel-image")
+                                img(src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys")
                             a(href="#")
                                 p(class="project-name") TOYOTA
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") UX/UI Design
 
                         div(class="swiper-slide project-wrapper railyard-brief")
+                            div(class="railyard-mobile-carousel-image")
+                                img(src="img/Railyard/Railyard-Logo.png" alt="railyard logo")
                             a(href="#")
                                 p(class="project-name") Railyard Labs @
                                     br
@@ -84,12 +97,16 @@ html(lang="en")
                                 P(class="project-category") Branding
 
                         div(class="swiper-slide project-wrapper intl-coop-brief")
+                            div(class="intl-coop-mobile-carousel-image")
+                                img(src="img/Intl-Coop/Intl Co-op Info Session Banner - Fall 2016-01.jpg" alt="photo of person on a mountain")
                             a(href="#")
                                 p(class="project-name") International Co-op
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") Marketing, Visual Design
 
                         div(class="swiper-slide project-wrapper sma-brief")
+                            div(class="sma-mobile-carousel-image")
+                                img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
                             a(href="#")
                                 p(class="project-name") Student Marketing Association
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
@@ -100,7 +117,8 @@ html(lang="en")
             div(class="container")
                 include footer.pug
                     
-        script(src="js/page-loader.js")
+        //script(src="js/page-loader.js")
+        //script(src="js/main.js")
         script(src="js/swiper.min.js")
         script(src="js/swiper-initialize.js")
         script(src="js/hero-banner.js")

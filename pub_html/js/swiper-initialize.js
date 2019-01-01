@@ -56,7 +56,7 @@ var mySwiper = new Swiper('.swiper-container', {
         575: {
             slidesPerView: 1,
             slidesPerGroup: 1,
-            spaceBetween: 0,
+            spaceBetween: 50,
         }
     }
 
