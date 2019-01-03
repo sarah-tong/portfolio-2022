@@ -9,21 +9,10 @@ html(lang="en")
         title Sarah Tong – UX Designer – Portfolio
         
         link(rel="stylesheet" href="css/swiper.css")
-        
-        link(rel="stylesheet" href="css/normalize.css")
         link(rel="stylesheet" href="css/main.css")
-        
-        link(href="https://fonts.googleapis.com/css?family=Lato:400,900|Playfair+Display:900")
 
-    body
-        
-        //div(class="loader-container")
-            div(class="loader")
-                div(class="circle1")
-                div(class="circle2")
-                div(class="circle3")
-                
-                    
+    body(id="homepage")
+                 
         div(class="page-content animate-bottom")
         
             div(class="nav-wrapper")
@@ -35,7 +24,7 @@ html(lang="en")
                         button(class="hamburger-menu")
                             span
                             span
-                            span    
+                            span
 
                         ul(class="main-nav")
                             li
@@ -81,7 +70,7 @@ html(lang="en")
                         div(class="swiper-slide project-wrapper toyota-brief")
                             div(class="toyota-mobile-carousel-image")
                                 img(src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys")
-                            a(href="#")
+                            a(href="toyota.html")
                                 p(class="project-name") TOYOTA
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") UX/UI Design
@@ -89,7 +78,7 @@ html(lang="en")
                         div(class="swiper-slide project-wrapper railyard-brief")
                             div(class="railyard-mobile-carousel-image")
                                 img(src="img/Railyard/Railyard-Logo.png" alt="railyard logo")
-                            a(href="#")
+                            a(href="railyard.html")
                                 p(class="project-name") Railyard Labs @
                                     br
                                     | Dossier Creative
@@ -99,7 +88,7 @@ html(lang="en")
                         div(class="swiper-slide project-wrapper intl-coop-brief")
                             div(class="intl-coop-mobile-carousel-image")
                                 img(src="img/Intl-Coop/Intl Co-op Info Session Banner - Fall 2016-01.jpg" alt="photo of person on a mountain")
-                            a(href="#")
+                            a(href="intl-coop.html")
                                 p(class="project-name") International Co-op
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") Marketing, Visual Design
@@ -107,7 +96,7 @@ html(lang="en")
                         div(class="swiper-slide project-wrapper sma-brief")
                             div(class="sma-mobile-carousel-image")
                                 img(src="img/SMA/SMA-Logo.svg" alt="SMA logo")
-                            a(href="#")
+                            a(href="student-marketing-association.html")
                                 p(class="project-name") Student Marketing Association
                                 p(class="project-description") Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.
                                 P(class="project-category") Marketing, Visual Design
@@ -117,8 +106,14 @@ html(lang="en")
             div(class="container")
                 include footer.pug
                     
-        //script(src="js/page-loader.js")
-        //script(src="js/main.js")
+        script.
+            document.addEventListener('DOMContentLoaded', function () {
+            var pageAnimation = setTimeout(showPage, 1000);
+
+            function showPage() {
+                document.querySelector(".page-content").classList.add('show');
+                }
+            });
         script(src="js/swiper.min.js")
         script(src="js/swiper-initialize.js")
         script(src="js/hero-banner.js")

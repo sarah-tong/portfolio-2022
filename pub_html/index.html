@@ -7,26 +7,16 @@
     <meta charset="utf-8">
     <title>Sarah Tong – UX Designer – Portfolio</title>
     <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Playfair+Display:900">
   </head>
-  <body>
-    <!--div(class="loader-container")
-    div(class="loader")
-        div(class="circle1")
-        div(class="circle2")
-        div(class="circle3")
-        
-            
-    -->
+  <body id="homepage">
     <div class="page-content animate-bottom">
       <div class="nav-wrapper">
         <div class="container">
           <nav class="navbar">
             <div class="logo"> <a href="index.html">ST </a></div>
             <input class="hamburger-menu-checkbox" type="checkbox">
-            <button class="hamburger-menu"><span></span><span></span><span>   </span></button>
+            <button class="hamburger-menu"><span></span><span></span><span></span></button>
             <ul class="main-nav">
               <li><a class="active-link" href="index.html">Projects</a></li>
               <li><a href="about.html">About</a></li>
@@ -59,25 +49,25 @@
                 <P class="project-category">UX/UI Design</P></a>
             </div>
             <div class="swiper-slide project-wrapper toyota-brief">
-              <div class="toyota-mobile-carousel-image"><img src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys"></div><a href="#">
+              <div class="toyota-mobile-carousel-image"><img src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys"></div><a href="toyota.html">
                 <p class="project-name">TOYOTA</p>
                 <p class="project-description">Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.</p>
                 <P class="project-category">UX/UI Design</P></a>
             </div>
             <div class="swiper-slide project-wrapper railyard-brief">
-              <div class="railyard-mobile-carousel-image"><img src="img/Railyard/Railyard-Logo.png" alt="railyard logo"></div><a href="#">
+              <div class="railyard-mobile-carousel-image"><img src="img/Railyard/Railyard-Logo.png" alt="railyard logo"></div><a href="railyard.html">
                 <p class="project-name">Railyard Labs @<br>Dossier Creative</p>
                 <p class="project-description">Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.</p>
                 <P class="project-category">Branding</P></a>
             </div>
             <div class="swiper-slide project-wrapper intl-coop-brief">
-              <div class="intl-coop-mobile-carousel-image"><img src="img/Intl-Coop/Intl Co-op Info Session Banner - Fall 2016-01.jpg" alt="photo of person on a mountain"></div><a href="#">
+              <div class="intl-coop-mobile-carousel-image"><img src="img/Intl-Coop/Intl Co-op Info Session Banner - Fall 2016-01.jpg" alt="photo of person on a mountain"></div><a href="intl-coop.html">
                 <p class="project-name">International Co-op</p>
                 <p class="project-description">Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.</p>
                 <P class="project-category">Marketing, Visual Design</P></a>
             </div>
             <div class="swiper-slide project-wrapper sma-brief">
-              <div class="sma-mobile-carousel-image"><img src="img/SMA/SMA-Logo.svg" alt="SMA logo"></div><a href="#">
+              <div class="sma-mobile-carousel-image"><img src="img/SMA/SMA-Logo.svg" alt="SMA logo"></div><a href="student-marketing-association.html">
                 <p class="project-name">Student Marketing Association</p>
                 <p class="project-description">Website design that presents long-haul train travel as a journey-based experience to improve ridership numbers.</p>
                 <P class="project-category">Marketing, Visual Design</P></a>
@@ -92,8 +82,15 @@
         </footer>
       </div>
     </div>
-    <!--script(src="js/page-loader.js")-->
-    <!--script(src="js/main.js")-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      var pageAnimation = setTimeout(showPage, 1000);
+      
+      function showPage() {
+          document.querySelector(".page-content").classList.add('show');
+          }
+      });
+    </script>
     <script src="js/swiper.min.js"></script>
     <script src="js/swiper-initialize.js"></script>
     <script src="js/hero-banner.js"></script>
