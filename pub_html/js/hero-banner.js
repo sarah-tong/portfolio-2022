@@ -112,21 +112,25 @@ function showImagePopup() {
     }
 }
 
+function removeHomepageBioHide() {
+    viaBrief.onmouseover = function () {}
+    viaBrief.onmouseout = function () {}
+    toyotaBrief.onmouseover = function () {}
+    toyotaBrief.onmouseout = function () {}
+    railyardBrief.onmouseover = function () {}
+    railyardBrief.onmouseout = function () {}
+    intlCoopBrief.onmouseover = function () {}
+    intlCoopBrief.onmouseout = function () {}
+    smaBrief.onmouseover = function () {}
+    smaBrief.onmouseout = function () {}
+}
+
 showImagePopup();
 
 window.addEventListener("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
         showImagePopup();
     } else {
-        viaBrief.onmouseover = function () {}
-        viaBrief.onmouseout = function () {}
-        toyotaBrief.onmouseover = function () {}
-        toyotaBrief.onmouseout = function () {}
-        railyardBrief.onmouseover = function () {}
-        railyardBrief.onmouseout = function () {}
-        intlCoopBrief.onmouseover = function () {}
-        intlCoopBrief.onmouseout = function () {}
-        smaBrief.onmouseover = function () {}
-        smaBrief.onmouseout = function () {}
+        removeHomepageBioHide();
     }
 });

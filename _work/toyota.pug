@@ -7,30 +7,14 @@ html(lang="en")
         meta(charset="utf-8")
 
         title Sarah Tong – UX Designer – Portfolio
-        
-        link(rel="stylesheet" href="css/swiper.css")
+
         link(rel="stylesheet" href="css/main.css")
 
     body
                  
         div(class="page-content animate-bottom")
         
-            div(class="nav-wrapper")
-                div(class="container")
-                    nav(class="navbar")
-                        div(class="logo") 
-                            a(href="index.html") ST 
-                        input(class="hamburger-menu-checkbox" type="checkbox")
-                        button(class="hamburger-menu")
-                            span
-                            span
-                            span
-
-                        ul(class="main-nav")
-                            li
-                                a(href="index.html" class="active-link") Projects
-                            li
-                                a(href="about.html") About
+            include nav-inactive.pug
 
             div(class="full-width-container")
                 div(class="project-banner")
@@ -140,7 +124,7 @@ html(lang="en")
                     
                     section
                         h4 Onboarding
-                        div(class="flex-wrapper")
+                        div(class="flex-wrapper align-items-center")
                             div(class="col-50")
                                 div(class="img-wrapper")
                                     img(src="img/Toyota/onboarding.png" data-action="zoom" alt="screenshot of Toyota guardian splash screen app")
@@ -149,7 +133,7 @@ html(lang="en")
             
                     section
                         h4 The Garage
-                        div(class="flex-wrapper")
+                        div(class="flex-wrapper align-items-center")
                             div(class="col-50")
                                 div(class="video-wrapper toyota-video-wrapper")
                                     video(controls disablepictureinpicture preload controlsList="nodownload")
@@ -159,7 +143,7 @@ html(lang="en")
             
                     section
                         h4 The Dashboard
-                        div(class="flex-wrapper")
+                        div(class="flex-wrapper align-items-center")
                             div(class="col-50")
                                 div(class="img-wrapper")
                                     img(src="img/Toyota/dashboard.png" data-action="zoom" alt="dashboard page")
@@ -168,7 +152,7 @@ html(lang="en")
             
                     section
                         h4 Activity
-                        div(class="flex-wrapper")
+                        div(class="flex-wrapper align-items-center")
                             div(class="col-50")
                                 div(class="video-wrapper toyota-video-wrapper")
                                     video(controls disablepictureinpicture preload controlsList="nodownload")
@@ -178,7 +162,7 @@ html(lang="en")
             
                     section
                         h4 Routines
-                        div(class="flex-wrapper")
+                        div(class="flex-wrapper align-items-center")
                             div(class="col-50")
                                 div(class="video-wrapper toyota-video-wrapper")
                                     video(controls disablepictureinpicture preload controlsList="nodownload")
@@ -188,7 +172,7 @@ html(lang="en")
             
                     section
                         h4 Notifications
-                        div(class="flex-wrapper")
+                        div(class="flex-wrapper align-items-center")
                             div(class="col-50")
                                 div(class="video-wrapper toyota-video-wrapper")
                                     video(controls disablepictureinpicture preload controlsList="nodownload")
@@ -204,7 +188,7 @@ html(lang="en")
                 p We considered how Toyota Guardian could iterate and evolve when autonomous cars do come into the market. From our research, Toyota has expressed interest in blockchain smart contracts that would allow Toyota owners to rent out their vehicle’s unused time to earn money. Moreover, we know that younger leaseholders are motivated to lease because of lower upfront costs and preference for subscription based services. 
                 
                 section
-                    div(class="flex-wrapper")
+                    div(class="flex-wrapper align-items-center")
                         div(class="col-50")
                             div(class="video-wrapper toyota-video-wrapper")
                                     video(controls disablepictureinpicture preload controlsList="nodownload")
