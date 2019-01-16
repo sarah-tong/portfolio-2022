@@ -270,7 +270,7 @@ section {
         & li {
             display: inline-block;
 
-            &:first-child {
+            &:not(:last-child) {
                 margin-right: 2rem;
             }
 
@@ -329,7 +329,7 @@ section {
                 opacity: 1;
                 transition: opacity 1s;
 
-                @for $i from 1 through 2 {
+                @for $i from 1 through 3 {
                     &:nth-child(#{$i}) {
                         transition-delay: $i * 0.1s + 0.2s;
                     }
@@ -716,9 +716,12 @@ body:not(#homepage) {
             flex: none;
         }
     }
-    
-    #sma-brochure .img-wrapper img {
-        box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
+}
+
+// About
+#about {
+    & h4 {
+        font-size: 2rem;
     }
 }
 
@@ -1009,7 +1012,7 @@ body:not(#homepage) {
             visibility: hidden;
             background: rgba(237, 83, 76, 0.97);
 
-            & li:first-child {
+            & li:first-child, & li:nth-child(2) {
                 margin-right: 0;
             }
 

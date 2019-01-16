@@ -10,9 +10,9 @@
  * Released on: November 1, 2018
  */
 
-.swiper-container, .swiper-container-project {
+.swiper-container, #SMA-branding-book, #SMA-brochure {
     /*    margin: 0 auto;*/
-    position: relative;
+/*    position: relative;*/
     overflow: hidden;
     list-style: none;
     /*    padding: 0;*/
