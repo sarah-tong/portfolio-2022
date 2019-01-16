@@ -1015,6 +1015,9 @@ body:not(#homepage) {
 .project-summary p {
   margin: 0; }
 
+.multi-page-swiper-container {
+  position: relative; }
+
 #VIA-business-problem-img,
 #VIA-customer-segment-img {
   padding: 5rem 1rem; }
@@ -1038,6 +1041,10 @@ body:not(#homepage) {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none; }
+
+#sma #sma-brochure .img-wrapper img {
+  -webkit-box-shadow: inset 0px 0px 0px 1px black;
+  box-shadow: inset 0px 0px 0px 1px black; }
 
 @-webkit-keyframes loader-animation {
   0%,
@@ -1089,13 +1096,29 @@ body:not(#homepage) {
 
 @-webkit-keyframes arrow-bounce-next {
   0% {
+    right: -4rem; }
+  50% {
+    right: -5rem; }
+  100% {
+    right: -4rem; } }
+
+@keyframes arrow-bounce-next {
+  0% {
+    right: -4rem; }
+  50% {
+    right: -5rem; }
+  100% {
+    right: -4rem; } }
+
+@-webkit-keyframes arrow-bounce-next-homepage {
+  0% {
     right: -3rem; }
   50% {
     right: -4rem; }
   100% {
     right: -3rem; } }
 
-@keyframes arrow-bounce-next {
+@keyframes arrow-bounce-next-homepage {
   0% {
     right: -3rem; }
   50% {

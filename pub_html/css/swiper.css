@@ -10,7 +10,7 @@
  * Released on: November 1, 2018
  */
 
-.swiper-container {
+.swiper-container, .swiper-container-project {
     /*    margin: 0 auto;*/
     position: relative;
     overflow: hidden;
@@ -220,7 +220,7 @@
 }
 
 .swiper-button-prev.swiper-button-disabled:hover,
-.swiper-button-next.swiper-button-disabled:hover {
+.swiper-button-next.swiper-button-disabled:hover, #homepage .swiper-button-next.swiper-button-disabled:hover {
     animation: none;
 }
 
@@ -244,12 +244,21 @@
     /*    right: 10px;*/
     left: auto;
     /* custom */
-    right: -3rem;
+    right: -4rem;
     font-size: 1.25rem;
+}
+
+#homepage .swiper-button-next,
+#homepage .swiper-container-rtl .swiper-button-prev{
+    right: -3rem;
 }
 
 .swiper-button-next:hover {
     animation: arrow-bounce-next ease-in-out 2s infinite;
+}
+
+#homepage .swiper-button-next:hover{
+    animation: arrow-bounce-next-homepage ease-in-out 2s infinite;
 }
 
 .swiper-button-prev.swiper-button-white,
@@ -288,6 +297,10 @@
     display: none;
     
     /* custom */
+    margin-bottom: 2rem;
+}
+
+#homepage .swiper-pagination{
     margin-top: 2rem;
 }
 

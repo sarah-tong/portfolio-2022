@@ -679,6 +679,10 @@ body:not(#homepage) {
     }
 }
 
+.multi-page-swiper-container {
+    position: relative;
+}
+
 // VIA
 #VIA-business-problem-img,
 #VIA-customer-segment-img {
@@ -711,6 +715,10 @@ body:not(#homepage) {
             width: 16%;
             flex: none;
         }
+    }
+    
+    #sma-brochure .img-wrapper img {
+        box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
     }
 }
 
@@ -752,6 +760,20 @@ body:not(#homepage) {
 
 
 @keyframes arrow-bounce-next {
+    0% {
+        right: -4rem;
+    }
+
+    50% {
+        right: -5rem;
+    }
+
+    100% {
+        right: -4rem;
+    }
+}
+
+@keyframes arrow-bounce-next-homepage {
     0% {
         right: -3rem;
     }
