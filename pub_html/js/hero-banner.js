@@ -63,21 +63,19 @@ function showImagePopup() {
         //            toyotaProjectWrapper.classList.remove('active');
     }
 
-    railyardBrief.onmouseover = function () {
-        railyardBanner.classList.add('show');
-        homepageBio.classList.add('hide');
-        document.body.classList.add('orange');
-        navWrapper.classList.add('orange');
-        //            railyardProjectWrapper.classList.add('active');
-    };
-
-    railyardBrief.onmouseout = function () {
-        railyardBanner.classList.remove('show');
-        homepageBio.classList.remove('hide');
-        document.body.classList.remove('orange');
-        navWrapper.classList.remove('orange');
-        //            railyardProjectWrapper.classList.remove('active');
-    }
+//    railyardBrief.onmouseover = function () {
+//        railyardBanner.classList.add('show');
+//        homepageBio.classList.add('hide');
+//        document.body.classList.add('orange');
+//        navWrapper.classList.add('orange');
+//    };
+//
+//    railyardBrief.onmouseout = function () {
+//        railyardBanner.classList.remove('show');
+//        homepageBio.classList.remove('hide');
+//        document.body.classList.remove('orange');
+//        navWrapper.classList.remove('orange');
+//    }
 
     intlCoopBrief.onmouseover = function () {
         intlCoopBanner.classList.add('show');
@@ -117,8 +115,8 @@ function removeHomepageBioHide() {
     viaBrief.onmouseout = function () {}
     toyotaBrief.onmouseover = function () {}
     toyotaBrief.onmouseout = function () {}
-    railyardBrief.onmouseover = function () {}
-    railyardBrief.onmouseout = function () {}
+//    railyardBrief.onmouseover = function () {}
+//    railyardBrief.onmouseout = function () {}
     intlCoopBrief.onmouseover = function () {}
     intlCoopBrief.onmouseout = function () {}
     smaBrief.onmouseover = function () {}
