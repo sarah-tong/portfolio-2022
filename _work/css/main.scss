@@ -123,7 +123,12 @@ body {
     }
 }
 
-h1, h2, h3, h4, p, a {
+h1,
+h2,
+h3,
+h4,
+p,
+a {
     color: $dark-grey;
 }
 
@@ -444,7 +449,7 @@ section {
         padding: 55vh 0 0 0;
         margin: 1rem 0;
     }
-    
+
     .flex-wrapper & {
         margin: 0;
     }
@@ -692,6 +697,10 @@ body:not(#homepage) {
 }
 
 // Toyota
+.toyota-prototype img {
+    width: 84%;
+}
+
 .toyota-video-wrapper {
     padding: 170% 0 0 0;
 }
@@ -1014,7 +1023,8 @@ body:not(#homepage) {
             visibility: hidden;
             background: rgba(237, 83, 76, 0.97);
 
-            & li:first-child, & li:nth-child(2) {
+            & li:first-child,
+            & li:nth-child(2) {
                 margin-right: 0;
             }
 

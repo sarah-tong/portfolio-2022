@@ -389,7 +389,12 @@ body {
   body.blue {
     background-color: #d0e4f2; }
 
-h1, h2, h3, h4, p, a {
+h1,
+h2,
+h3,
+h4,
+p,
+a {
   color: #404041; }
 
 h1 {
@@ -1028,6 +1033,9 @@ body:not(#homepage) {
 #VIA-customer-segment-img {
   padding: 5rem 1rem; }
 
+.toyota-prototype img {
+  width: 84%; }
+
 .toyota-video-wrapper {
   padding: 170% 0 0 0; }
 
@@ -1303,7 +1311,8 @@ body:not(#homepage) {
     z-index: 7;
     visibility: hidden;
     background: rgba(237, 83, 76, 0.97); }
-    .navbar .main-nav li:first-child, .navbar .main-nav li:nth-child(2) {
+    .navbar .main-nav li:first-child,
+    .navbar .main-nav li:nth-child(2) {
       margin-right: 0; }
     .navbar .main-nav li {
       opacity: 0; }
