@@ -21,10 +21,10 @@ $dossier-orange: #E45A3D;
     font-weight: 400;
     src: url("../fonts/Lato/Lato-Regular.eot");
     src: url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"),
-    url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
-    url("../fonts/Lato/Lato-Regular.woff") format("woff"),
-    url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
-    url("../fonts/Lato/Lato-Regular.svg#Lato") format("svg");
+        url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+        url("../fonts/Lato/Lato-Regular.woff") format("woff"),
+        url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
+        url("../fonts/Lato/Lato-Regular.svg#Lato") format("svg");
 }
 
 @font-face {
@@ -33,10 +33,10 @@ $dossier-orange: #E45A3D;
     font-weight: 900;
     src: url("../fonts/Lato/Lato-Black.eot");
     src: url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"),
-    url('../fonts/Lato/Lato-Black.woff2') format('woff2'),
-    url("../fonts/Lato/Lato-Black.woff") format("woff"),
-    url("../fonts/Lato/Lato-Black.ttf") format("truetype"),
-    url("../fonts/Lato/Lato-Black.svg#Lato") format("svg");
+        url('../fonts/Lato/Lato-Black.woff2') format('woff2'),
+        url("../fonts/Lato/Lato-Black.woff") format("woff"),
+        url("../fonts/Lato/Lato-Black.ttf") format("truetype"),
+        url("../fonts/Lato/Lato-Black.svg#Lato") format("svg");
 }
 
 @font-face {
@@ -45,10 +45,10 @@ $dossier-orange: #E45A3D;
     font-weight: 900;
     src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.eot");
     src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.eot?#iefix") format("embedded-opentype"),
-    url('../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff2') format('woff2'),
-    url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff") format("woff"),
-    url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf") format("truetype"),
-    url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.svg#PlayfairDisplay") format("svg");
+        url('../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff2') format('woff2'),
+        url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff") format("woff"),
+        url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf") format("truetype"),
+        url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.svg#PlayfairDisplay") format("svg");
 }
 
 // mixins
@@ -744,12 +744,12 @@ body:not(#homepage) {
     & section h4 {
         text-align: center;
     }
-    
+
     & .video-wrapper {
         padding: 75.42% 0 0 0;
     }
-    
-    & .refresh-logo img{
+
+    & .refresh-logo img {
         max-width: 31.25rem;
     }
 }
@@ -759,7 +759,7 @@ body:not(#homepage) {
     & h4 {
         font-size: 2rem;
     }
-    
+
     & .hello-banner {
         margin: 12rem auto;
     }
@@ -894,11 +894,6 @@ body:not(#homepage) {
     //    }
     .container {
         width: 70%;
-
-        #homepage &,
-        .nav-wrapper & {
-            margin: 0 6rem;
-        }
     }
 
     .intl-coop-image-popup img {
@@ -929,6 +924,13 @@ body:not(#homepage) {
 }
 
 @media (max-width: 1085px) {
+    .container {
+
+        #homepage &,
+        .nav-wrapper & {
+            margin: 0 6rem;
+        }
+    }
 
     .hero-banner .brief-bio {
         font-size: 3rem;
