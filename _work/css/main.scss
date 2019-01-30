@@ -11,6 +11,7 @@ $muted-orange: #faded8;
 $muted-blue: #d0e4f2;
 
 $sma-blue: #4696CC;
+$dossier-orange: #E45A3D;
 
 
 //fonts
@@ -20,10 +21,10 @@ $sma-blue: #4696CC;
     font-weight: 400;
     src: url("../fonts/Lato/Lato-Regular.eot");
     src: url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"),
-        url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
-        url("../fonts/Lato/Lato-Regular.woff") format("woff"),
-        url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
-        url("../fonts/Lato/Lato-Regular.svg#Lato") format("svg");
+    url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+    url("../fonts/Lato/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
+    url("../fonts/Lato/Lato-Regular.svg#Lato") format("svg");
 }
 
 @font-face {
@@ -32,10 +33,10 @@ $sma-blue: #4696CC;
     font-weight: 900;
     src: url("../fonts/Lato/Lato-Black.eot");
     src: url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"),
-        url('../fonts/Lato/Lato-Black.woff2') format('woff2'),
-        url("../fonts/Lato/Lato-Black.woff") format("woff"),
-        url("../fonts/Lato/Lato-Black.ttf") format("truetype"),
-        url("../fonts/Lato/Lato-Black.svg#Lato") format("svg");
+    url('../fonts/Lato/Lato-Black.woff2') format('woff2'),
+    url("../fonts/Lato/Lato-Black.woff") format("woff"),
+    url("../fonts/Lato/Lato-Black.ttf") format("truetype"),
+    url("../fonts/Lato/Lato-Black.svg#Lato") format("svg");
 }
 
 @font-face {
@@ -44,10 +45,10 @@ $sma-blue: #4696CC;
     font-weight: 900;
     src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.eot");
     src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.eot?#iefix") format("embedded-opentype"),
-        url('../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff2') format('woff2'),
-        url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff") format("woff"),
-        url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf") format("truetype"),
-        url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.svg#PlayfairDisplay") format("svg");
+    url('../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff2') format('woff2'),
+    url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff") format("woff"),
+    url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf") format("truetype"),
+    url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.svg#PlayfairDisplay") format("svg");
 }
 
 // mixins
@@ -222,7 +223,6 @@ section {
 //        display: flex;
 //    }
 //}
-
 .nav-wrapper {
     position: fixed;
     top: 0;
@@ -444,6 +444,7 @@ section {
     position: relative;
     padding: 56.25% 0 0 0;
     margin: 1.5rem 0;
+    overflow: hidden;
 
     .project-banner & {
         padding: 55vh 0 0 0;
@@ -563,7 +564,7 @@ footer {
 
 .railyard-image-popup {
     @include image-popup(15%);
-    background-color: #E45A3D;
+    background-color: $dossier-orange;
 }
 
 .intl-coop-image-popup {
@@ -606,7 +607,7 @@ footer {
 
 .railyard-mobile-carousel-image {
     @include mobile-carousel-image(20%);
-    background-color: #E45A3D;
+    background-color: $dossier-orange;
 }
 
 .intl-coop-mobile-carousel-image {
@@ -657,7 +658,6 @@ footer {
 
 
 // project pages
-
 body:not(#homepage) {
     line-height: 1.5;
 }
@@ -726,6 +726,31 @@ body:not(#homepage) {
             width: 16%;
             flex: none;
         }
+    }
+}
+
+// Railyard
+#railyard {
+    & .project-banner .img-wrapper {
+        background: $dossier-orange;
+        justify-content: center;
+
+        & img {
+            width: 16%;
+            flex: none;
+        }
+    }
+
+    & section h4 {
+        text-align: center;
+    }
+    
+    & .video-wrapper {
+        padding: 75.42% 0 0 0;
+    }
+    
+    & .refresh-logo img{
+        max-width: 31.25rem;
     }
 }
 
@@ -840,7 +865,6 @@ body:not(#homepage) {
 }
 
 // media queries
-
 @media (min-width: 1920px) {
     #homepage .container {
         width: 100rem;
@@ -968,6 +992,16 @@ body:not(#homepage) {
             }
 
             #sma & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 25%;
+            }
+
+            #railyard & img {
                 position: absolute;
                 top: 0;
                 left: 0;

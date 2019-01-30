@@ -636,7 +636,8 @@ section {
 .video-wrapper {
   position: relative;
   padding: 56.25% 0 0 0;
-  margin: 1.5rem 0; }
+  margin: 1.5rem 0;
+  overflow: hidden; }
   .project-banner .video-wrapper {
     padding: 55vh 0 0 0;
     margin: 1rem 0; }
@@ -1056,6 +1057,26 @@ body:not(#homepage) {
     -ms-flex: none;
     flex: none; }
 
+#railyard .project-banner .img-wrapper {
+  background: #E45A3D;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #railyard .project-banner .img-wrapper img {
+    width: 16%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
+
+#railyard section h4 {
+  text-align: center; }
+
+#railyard .video-wrapper {
+  padding: 75.42% 0 0 0; }
+
+#railyard .refresh-logo img {
+  max-width: 31.25rem; }
+
 #about h4 {
   font-size: 2rem; }
 
@@ -1266,6 +1287,14 @@ body:not(#homepage) {
         height: 100%;
         width: auto; }
     #sma .project-banner .img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 25%; }
+    #railyard .project-banner .img-wrapper img {
       position: absolute;
       top: 0;
       left: 0;
