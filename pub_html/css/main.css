@@ -1080,6 +1080,9 @@ body:not(#homepage) {
 #about h4 {
   font-size: 2rem; }
 
+#about .hello-banner {
+  margin: 12rem auto; }
+
 @-webkit-keyframes loader-animation {
   0%,
   80%,

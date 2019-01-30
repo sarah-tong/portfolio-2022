@@ -759,6 +759,10 @@ body:not(#homepage) {
     & h4 {
         font-size: 2rem;
     }
+    
+    & .hello-banner {
+        margin: 12rem auto;
+    }
 }
 
 // keyframes
