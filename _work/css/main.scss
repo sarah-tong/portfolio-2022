@@ -7,11 +7,13 @@ $light-grey: #A6A8AB;
 $muted-blue-grey: #C5D1DF;
 $muted-red: #edd6d6;
 $muted-sfu-red: #efd0d4;
+$muted-knack-red: #f5d5d5;
 $muted-orange: #faded8;
 $muted-blue: #d0e4f2;
 
 $sma-blue: #4696CC;
 $dossier-orange: #E45A3D;
+$knack-red: #ed2424;
 
 
 //fonts
@@ -113,6 +115,10 @@ body {
 
     &.sfu-red {
         background-color: $muted-sfu-red;
+    }
+    
+    &.knack-red {
+        background-color: $muted-knack-red;
     }
 
     &.orange {
@@ -242,6 +248,10 @@ section {
 
     &.sfu-red {
         background-color: $muted-sfu-red;
+    }
+    
+    &.knack-red {
+        background-color: $muted-knack-red;
     }
 
     &.orange {
@@ -567,6 +577,11 @@ footer {
     background-color: $dossier-orange;
 }
 
+.knack-image-popup {
+    @include image-popup(60%);
+    background-color: $knack-red;
+}
+
 .intl-coop-image-popup {
     @include image-popup(100%)
 }
@@ -608,6 +623,11 @@ footer {
 .railyard-mobile-carousel-image {
     @include mobile-carousel-image(20%);
     background-color: $dossier-orange;
+}
+
+.knack-mobile-carousel-image {
+    @include mobile-carousel-image(20%);
+    background-color: $knack-red;
 }
 
 .intl-coop-mobile-carousel-image {
@@ -709,26 +729,6 @@ body:not(#homepage) {
     margin-top: 2rem;
 }
 
-// Intl-Coop
-#intl-coop {
-    & .project-banner .img-wrapper img {
-        width: 116%;
-        flex: none;
-    }
-}
-
-// SMA
-#sma {
-    & .project-banner .img-wrapper {
-        background: $sma-blue;
-
-        & img {
-            width: 16%;
-            flex: none;
-        }
-    }
-}
-
 // Railyard
 #railyard {
     & .project-banner .img-wrapper {
@@ -751,6 +751,49 @@ body:not(#homepage) {
 
     & .refresh-logo img {
         max-width: 31.25rem;
+    }
+}
+
+// Knack Academics
+#knack {
+    & .project-banner .img-wrapper {
+        background: $knack-red;
+
+        & img {
+            max-width: 35rem;
+            width: 60%;
+            flex: none;
+        }
+    }
+    
+    & .video-wrapper {
+        padding: 62.5% 0 0 0;
+    }
+    
+    & section h4 {
+        padding-top: 2rem;
+        margin-bottom: -1rem;
+        text-align: center;
+    }
+}
+
+// Intl-Coop
+#intl-coop {
+    & .project-banner .img-wrapper img {
+        width: 116%;
+        flex: none;
+    }
+}
+
+// SMA
+#sma {
+    & .project-banner .img-wrapper {
+        background: $sma-blue;
+
+        & img {
+            width: 16%;
+            flex: none;
+        }
     }
 }
 
@@ -982,6 +1025,26 @@ body:not(#homepage) {
                 width: 100%;
             }
 
+            #railyard & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 25%;
+            }
+            
+            #knack & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 60%;
+            }
+            
             #intl-coop & {
                 background: #333333;
 
@@ -998,16 +1061,6 @@ body:not(#homepage) {
             }
 
             #sma & img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                width: 25%;
-            }
-
-            #railyard & img {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -1123,6 +1176,7 @@ body:not(#homepage) {
     .VIA-image-popup,
     .toyota-image-popup,
     .railyard-image-popup,
+    .knack-image-popup,
     .intl-coop-image-popup,
     .sma-image-popup {
         &.show {
@@ -1230,6 +1284,10 @@ body:not(#homepage) {
 
     .railyard-mobile-carousel-image img {
         width: 30%;
+    }
+    
+    .knack-mobile-carousel-image img {
+        width: 75%;
     }
 
     .intl-coop-mobile-carousel-image img {

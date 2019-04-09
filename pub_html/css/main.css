@@ -384,6 +384,8 @@ body {
     background-color: #edd6d6; }
   body.sfu-red {
     background-color: #efd0d4; }
+  body.knack-red {
+    background-color: #f5d5d5; }
   body.orange {
     background-color: #faded8; }
   body.blue {
@@ -456,6 +458,8 @@ section {
     background-color: #edd6d6; }
   .nav-wrapper.sfu-red {
     background-color: #efd0d4; }
+  .nav-wrapper.knack-red {
+    background-color: #f5d5d5; }
   .nav-wrapper.orange {
     background-color: #faded8; }
   .nav-wrapper.blue {
@@ -810,6 +814,33 @@ footer {
     width: 100%;
     opacity: 1; }
 
+.knack-image-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 50%;
+  height: inherit;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  -webkit-transition: width 0.25s, opacity 0.25s;
+  -o-transition: width 0.25s, opacity 0.25s;
+  transition: width 0.25s, opacity 0.25s;
+  background-color: #ed2424; }
+  .knack-image-popup img {
+    width: 60%;
+    height: auto;
+    position: relative; }
+  .knack-image-popup.show {
+    width: 100%;
+    opacity: 1; }
+
 .intl-coop-image-popup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -935,6 +966,23 @@ footer {
     width: 20%;
     height: auto; }
 
+.knack-mobile-carousel-image {
+  height: 16.5vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  display: none;
+  background-color: #ed2424; }
+  .knack-mobile-carousel-image img {
+    width: 20%;
+    height: auto; }
+
 .intl-coop-mobile-carousel-image {
   height: 16.5vh;
   -webkit-box-pack: center;
@@ -1043,20 +1091,6 @@ body:not(#homepage) {
 #speculative-solution section {
   margin-top: 2rem; }
 
-#intl-coop .project-banner .img-wrapper img {
-  width: 116%;
-  -webkit-box-flex: 0;
-  -ms-flex: none;
-  flex: none; }
-
-#sma .project-banner .img-wrapper {
-  background: #4696CC; }
-  #sma .project-banner .img-wrapper img {
-    width: 16%;
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none; }
-
 #railyard .project-banner .img-wrapper {
   background: #E45A3D;
   -webkit-box-pack: center;
@@ -1076,6 +1110,37 @@ body:not(#homepage) {
 
 #railyard .refresh-logo img {
   max-width: 31.25rem; }
+
+#knack .project-banner .img-wrapper {
+  background: #ed2424; }
+  #knack .project-banner .img-wrapper img {
+    max-width: 35rem;
+    width: 60%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
+
+#knack .video-wrapper {
+  padding: 62.5% 0 0 0; }
+
+#knack section h4 {
+  padding-top: 2rem;
+  margin-bottom: -1rem;
+  text-align: center; }
+
+#intl-coop .project-banner .img-wrapper img {
+  width: 116%;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none; }
+
+#sma .project-banner .img-wrapper {
+  background: #4696CC; }
+  #sma .project-banner .img-wrapper img {
+    width: 16%;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none; }
 
 #about h4 {
   font-size: 2rem; }
@@ -1278,6 +1343,22 @@ body:not(#homepage) {
       top: 0;
       left: 0;
       width: 100%; }
+    #railyard .project-banner .img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 25%; }
+    #knack .project-banner .img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 60%; }
     #intl-coop .project-banner .img-wrapper {
       background: #333333; }
       #intl-coop .project-banner .img-wrapper img {
@@ -1290,14 +1371,6 @@ body:not(#homepage) {
         height: 100%;
         width: auto; }
     #sma .project-banner .img-wrapper img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      width: 25%; }
-    #railyard .project-banner .img-wrapper img {
       position: absolute;
       top: 0;
       left: 0;
@@ -1376,6 +1449,7 @@ body:not(#homepage) {
   .VIA-image-popup.show,
   .toyota-image-popup.show,
   .railyard-image-popup.show,
+  .knack-image-popup.show,
   .intl-coop-image-popup.show,
   .sma-image-popup.show {
     display: none; }
@@ -1442,6 +1516,8 @@ body:not(#homepage) {
     width: 200%; }
   .railyard-mobile-carousel-image img {
     width: 30%; }
+  .knack-mobile-carousel-image img {
+    width: 75%; }
   .intl-coop-mobile-carousel-image img {
     width: 100%; }
   .sma-mobile-carousel-image img {
