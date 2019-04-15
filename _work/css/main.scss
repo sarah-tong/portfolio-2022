@@ -282,7 +282,7 @@ section {
         list-style: none;
         margin: 0;
         padding: 0;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
 
         & li {
             display: inline-block;
@@ -427,8 +427,7 @@ section {
     justify-content: center;
 
     .project-banner & {
-        height: 31.875rem;
-        ;
+        height: 55vh;
         align-items: center;
         overflow: hidden;
         margin: 1rem 0;
@@ -916,6 +915,12 @@ body:not(#homepage) {
     #homepage .container {
         width: 100rem;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 1615px) {
+    .hero-banner .brief-bio {
+        font-size: 4.75rem;
     }
 }
 
