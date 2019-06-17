@@ -14,6 +14,7 @@ $muted-blue: #d0e4f2;
 $sma-blue: #4696CC;
 $dossier-orange: #E45A3D;
 $knack-red: #ed2424;
+$rcp-orange: #ffead9;
 
 
 //fonts
@@ -120,6 +121,10 @@ body {
     &.knack-red {
         background-color: $muted-knack-red;
     }
+    
+    &.rcp-orange {
+        background-color: $rcp-orange;
+    }
 
     &.orange {
         background-color: $muted-orange;
@@ -137,6 +142,14 @@ h4,
 p,
 a {
     color: $dark-grey;
+}
+
+ol {
+   padding-inline-start: 1rem; 
+}
+
+li {
+    padding: 0 0 0.5rem 1rem;
 }
 
 h1 {
@@ -167,6 +180,20 @@ h4 {
     color: $light-grey;
 }
 
+p.quote {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+span.quote-person {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: darkgrey;
+    padding-top: 2rem;
+}
+
 section {
     margin-bottom: 5rem;
 }
@@ -193,6 +220,12 @@ section {
 
 .full-width-container {
     position: relative;
+    
+    & .img-wrapper.full-width {
+        margin: -6.5rem 0;
+        padding: 0 4rem;
+        box-sizing: border-box;
+    }
 }
 
 //.loader-container {
@@ -252,6 +285,10 @@ section {
     
     &.knack-red {
         background-color: $muted-knack-red;
+    }
+    
+    &.rcp-orange {
+        background-color: $rcp-orange;
     }
 
     &.orange {
@@ -443,6 +480,11 @@ section {
             height: auto;
         }
     }
+    
+    & a {
+        cursor: zoom-in;
+        cursor: -webkit-zoom-in; 
+    }
 
     .flex-wrapper & {
         margin: 0;
@@ -571,6 +613,10 @@ footer {
     @include image-popup(150%);
 }
 
+.rcp-image-popup {
+    @include image-popup(125%);
+}
+
 .railyard-image-popup {
     @include image-popup(15%);
     background-color: $dossier-orange;
@@ -616,6 +662,10 @@ footer {
 }
 
 .toyota-mobile-carousel-image {
+    @include mobile-carousel-image(150%);
+}
+
+.rcp-mobile-carousel-image {
     @include mobile-carousel-image(150%);
 }
 
@@ -727,6 +777,28 @@ body:not(#homepage) {
 #speculative-solution section {
     margin-top: 2rem;
 }
+
+// RCP
+.hep-screenshot {
+    height: 35rem;
+    
+    & img {
+       width: auto; 
+    }
+}
+
+#rcp {
+    & .quote-highlight {
+        background: $rcp-orange;
+    }
+    
+    & .video-wrapper {
+        padding: 62.5% 0 0 0;
+        border: 1px solid #a3a3a3;
+        box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0,0,0,0.25);
+    }
+}
+
 
 // Railyard
 #railyard {
@@ -1180,6 +1252,7 @@ body:not(#homepage) {
 
     .VIA-image-popup,
     .toyota-image-popup,
+    .rcp-image-popup,
     .railyard-image-popup,
     .knack-image-popup,
     .intl-coop-image-popup,
@@ -1285,6 +1358,10 @@ body:not(#homepage) {
 
     .toyota-mobile-carousel-image img {
         width: 200%;
+    }
+    
+    .rcp-mobile-carousel-image img {
+        width: 170%;
     }
 
     .railyard-mobile-carousel-image img {

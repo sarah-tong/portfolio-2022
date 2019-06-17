@@ -18,6 +18,10 @@ var toyotaBrief = document.querySelector(".toyota-brief");
 var toyotaBanner = document.querySelector(".toyota-image-popup");
 var toyotaProjectWrapper = document.querySelector(".project-wrapper.toyota-brief ");
 
+var rcpBrief = document.querySelector(".rcp-brief");
+var rcpBanner = document.querySelector(".rcp-image-popup");
+var rcpProjectWrapper = document.querySelector(".project-wrapper.rcp-brief ");
+
 var railyardBrief = document.querySelector(".railyard-brief");
 var railyardBanner = document.querySelector(".railyard-image-popup");
 var railyardProjectWrapper = document.querySelector(".project-wrapper.railyard-brief ");
@@ -61,6 +65,20 @@ function showImagePopup() {
         homepageBio.classList.remove('hide');
         document.body.classList.remove('red');
         navWrapper.classList.remove('red');
+    }
+    
+    rcpBrief.onmouseover = function () {
+        rcpBanner.classList.add('show');
+        homepageBio.classList.add('hide');
+        document.body.classList.add('rcp-orange');
+        navWrapper.classList.add('rcp-orange');
+    };
+
+    rcpBrief.onmouseout = function () {
+        rcpBanner.classList.remove('show');
+        homepageBio.classList.remove('hide');
+        document.body.classList.remove('rcp-orange');
+        navWrapper.classList.remove('rcp-orange');
     }
 
     railyardBrief.onmouseover = function () {
@@ -125,6 +143,8 @@ function removeHomepageBioHide() {
     viaBrief.onmouseout = function () {}
     toyotaBrief.onmouseover = function () {}
     toyotaBrief.onmouseout = function () {}
+    rcpBrief.onmouseover = function () {}
+    rcpBrief.onmouseout = function () {}
     railyardBrief.onmouseover = function () {}
     railyardBrief.onmouseout = function () {}
     knackBrief.onmouseover = function () {}

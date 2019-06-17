@@ -93,3 +93,19 @@ var SMABrochureSwiper = new Swiper('#SMA-brochure', {
         clickable: true,
     },
 });
+
+var RCPPersonaSwiper = new Swiper('#rcp-personas', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 80,
+    
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});

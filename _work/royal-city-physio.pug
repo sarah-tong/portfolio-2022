@@ -27,7 +27,7 @@ html(lang="en")
             div(class="full-width-container")
                 div(class="project-banner")
                     div(class="img-wrapper")
-                        img(src="img/Knack/knack_logo_reverse.png" alt="Knack Academics logo")
+                        img(src="img/RCP/armstretch.jpg" alt="Arm stretch")
                         
             div(class="container introduction")
                 div(class="project-header")
@@ -54,14 +54,21 @@ html(lang="en")
                         p 13 weeks
             
             div(class="container")
-                h2 Research Methods + Outcomes
+                h2 Process
                 section
                     p My team conducted research through two methods: an ethnography study to explore opportunities in enhancing RCP’s quality of care, and, once the opportunity was identified, a participatory workshop to gain a deeper understanding.
-                    div(class="img-wrapper")
-                        img(src="img/Knack/KnackMoodboard.png" data-src="img/Knack/KnackMoodboard.png" data-action="zoom" alt="collection of images on a moodboard" class="blur lazyload")
                         
                 section
-                    h3 Ethnography: Interviews + Observations
+                    h3 Ethnography: Interviews and Observations
+                    
+                    div(class="flex-wrapper")
+                        div(class="col-50 img-col")
+                            div(class="img-wrapper")
+                                img(src="img/RCP/ethnography1.jpg" data-src="img/RCP/ethnography1.jpg" data-action="zoom" alt="physiotherapist with laptop" class="blur lazyload")
+                        div(class="col-50 img-col")
+                            div(class="img-wrapper")
+                                img(src="img/RCP/ethnography3.jpg" data-src="img/RCP/ethnography3.jpg" data-action="zoom" alt="physiotherapist with patient" class="blur lazyload")
+                
                     p From an interview I conducted with a receptionist, we learned that patients face barriers during the onboarding phase. 
                         b This includes new patients expecting private rooms instead of an open studio concept, requiring administration to explain and ease them; not realizing that they need to register their vehicle; and having frustrations around the booking system when their appointment is not successfully booked. 
                         | The problem is particularly more apparent when the waiting area becomes busy and office administration are unable to give their usual verbal welcome and instructions. 
@@ -72,18 +79,71 @@ html(lang="en")
                         b physiotherapists prescribe exercises different ways, 
                         | such as verbally, in handwriting, or through drawn pictures or photos. This results patients being uncertain of what to do, skipping their recovery program until the next time.
 
-                    p Continuing from this education stage into post-session exercise phase, we learned from our interview with the physiotherapist that some patients struggle to access their exercise routines on the current online home exercise program. From observing a patient who walked us through the home exercise program, they were frustrated with having to open multiple email links and PDFs to get there. When patients do not understand exercise instructions, they tend to wait until the next session to clarify, delaying their recovery. As well, not all patients have access to their physiotherapist’s contact information.
+                    p(class="quote") &#8220;
+                        span(class="quote-highlight") Most patients won’t send me an email
+                        |  saying ‘Hey, I don’t know what I’m doing’. 
+                        span(class="quote-highlight") They’ll wait until the next appointment
+                        |  which is usually a week away so in that time they probably have not been doing any exercises for a week which is defeating the purpose of giving them home exercises.&#8221; 
+                        span(class="quote-person") – Physiotherapist
                     
-                    p "Most patients won’t send me an email saying ‘Hey, I don’t know what I’m doing’. They’ll wait until the next appointment which is usually a week away so in that time they probably have not been doing any exercises for a week which is defeating the purpose of giving them home exercises." – Physiotherapist
+                    div(class="flex-wrapper align-items-center")
+                        div(class="col-50 img-col")
+                            div(class="img-wrapper hep-screenshot")
+                                img(src="img/RCP/hep.jpg" data-src="img/RCP/hep.jpg" data-action="zoom" alt="journey framework with all personas" class="blur lazyload")  
+                        div(class="col-50 img-col")
+                            p Continuing from this education stage into post-session exercise phase, we learned from our interview with the physiotherapist that some patients struggle to access their exercise routines on the current online home exercise program. From observing a patient who walked us through the home exercise program, they were 
+                                b frustrated with having to open multiple email links and PDFs 
+                                | to get there. When patients do not understand exercise instructions, they tend to wait until the next session to clarify, delaying their recovery. As well, not all patients have access to their physiotherapist’s contact information.
+                    
+                section
+                    h3 Finding the Opportunity
+                    
+                    div(class="multi-page-swiper-container")          
+                        div(id="rcp-personas")
+                            div(class="swiper-button-prev") &#8592;
+                            div(class="swiper-button-next") &#8594;
+                            div(class="swiper-wrapper")
+                                div(class="img-wrapper swiper-slide")
+                                    img(src="img/RCP/persona-ongoing.png" alt="ongoing patient persona")
+                                div(class="img-wrapper swiper-slide")
+                                    img(src="img/RCP/persona-potential.png" alt="potential patient persona")
+                                div(class="img-wrapper swiper-slide")
+                                    img(src="img/RCP/persona-physiotherapist.png" alt="physiotherapist persona")
+                            div(class="swiper-pagination")
+                    
+                    div(class="img-wrapper")
+                        img(src="img/RCP/journeyframework.png" data-src="img/RCP/journeyframework.png" data-action="zoom" alt="journey framework with all personas" class="blur lazyload")   
 
-                    p We then created three personas and mapped them to a customer journey map to visualize the gaps that emerged between what RCP wanted to achieve in their quality of care to what patients perceived.
+                    p We created three personas and mapped them to a customer journey map to visualize the gaps that emerged between what RCP wanted to achieve in their quality of care to what patients perceived.
+                    
+                section
+                    h3 Design Problem and Focus
+                    
+                    div(class="img-wrapper")
+                        img(src="img/RCP/designproblems.png" data-src="img/RCP/designproblems.png" data-action="zoom" alt="3 design problems for RCP" class="blur lazyload")
 
-                    p Of the three problem areas, the largest drop in RCP’s quality of care lies in the post-session exercise stage, a result of misinterpreted instructions and poor access to recovery routines. As our design focus, this stage plays a significant part of recovery because it relies on the patient to complete their home exercises. By helping patients overcome their frustrations and understand their physiotherapist’s recommendations, it can contribute to a more effective recovery and thus a more positive perception in RCP’s quality of care. As well, this problem area resonated with RCP the most.
+                    p Of the three problem areas, the largest drop in RCP’s quality of care lies in the post-session exercise stage, a result of misinterpreted instructions and poor access to recovery routines. We identified this as our design focus considering that this stage plays a significant part of recovery because it relies on the patient to complete their home exercises. By helping patients overcome their frustrations and understand their physiotherapist’s recommendations, it can contribute to a more effective recovery and thus a more positive perception in RCP’s quality of care. As well, this problem area resonated with RCP the most.
+
+                    
+                    div(class="img-wrapper")
+                        img(src="img/RCP/designfocus.png" data-src="img/RCP/designfocus.png" data-action="zoom" alt="design focus for project" class="blur lazyload")
 
                 section
                     h3 Participatory Workshop
                     
-                    p Focusing on the post-session exercise stage, we conducted a participatory workshop to gain a deeper understanding of the home exercise program. We created 2 exercises: (1) cognitive mapping to prompt RCP to lay out the process of how a physiotherapist would create and how a patient would access a customized exercise routine, and (2) H-Form to highlight frustrations and successes with the current home exercise program.
+                    div(class="flex-wrapper")
+                        div(class="col-50 img-col")
+                            div(class="img-wrapper")
+                                img(src="img/RCP/workshop1.jpg" data-src="img/RCP/workshop1.jpg" data-action="zoom" alt="participatory workshop with 1 physiotherapist" class="blur lazyload")
+                        div(class="col-50 img-col")
+                            div(class="img-wrapper")
+                                img(src="img/RCP/workshop2.jpg" data-src="img/RCP/workshop2.jpg" data-action="zoom" alt="participatory workshop with 2 physiotherapists" class="blur lazyload")
+                    
+                    p Focusing on the post-session exercise stage, we conducted a participatory workshop to gain a deeper understanding of the home exercise program. We created 2 exercises: (1) 
+                        b cognitive mapping 
+                        | to prompt RCP to lay out the process of how a physiotherapist would create and how a patient would access a customized exercise routine, and (2) 
+                        b H-Form 
+                        | to highlight frustrations and successes with the current home exercise program.
 
                     p We’ve gained 3 insights from this to explore in our design proposal:
                     
@@ -107,45 +167,104 @@ html(lang="en")
                 section
                     p Given our constraints and solutions we considered, to resolve RCP’s drop in post-session care, our proposal is a home exercise program (HEP) web platform that serves two key stakeholders - physiotherapists and patients.
                     
-                    p Physiotherapist Use:
-                    p Assists physiotherapists in creating custom tailored recovery routines for patients, and delivering them in a consistent fashion. 
-                    p These routines can be quickly created in-clinic alongside the patient, by leveraging commonly used recovery templates and modifying them as needed.
+                    div(class="img-wrapper")
+                        img(src="img/RCP/rcp-mockup.png" data-src="img/RCP/rcp-mockup.png" data-action="zoom" alt="RCP Mockup" class="blur lazyload")
+                    
+                    div(class="flex-wrapper")
+                        div(class="col-50 img-col")
+                            b Physiotherapist Use
+                            p Assists physiotherapists in creating 
+                                b custom tailored recovery routines for patients, and delivering them in a consistent fashion. 
+                            p These 
+                                b routines can be quickly created in-clinic 
+                                | alongside the patient, by leveraging commonly used recovery templates and modifying them as needed.
+                        
+                        div(class="col-50 img-col")
+                            b Patient Use
+                            p 
+                                b Affords easy access to routines across both digital and print mediums
+                                |, with a 
+                                b priority on patient comprehension 
+                                | of each exercise and its benefit to their recovery.
 
-                    p Patient Use:
-                    p Affords easy access to routines across both digital and print mediums, with a priority on patient comprehension of each exercise and its benefit to their recovery. 
-                    p These are primarily accessed off-site, with patients being able to use their phones or even printed sheets depending on what they’re comfortable with.
-                    p By providing a centralized recovery guide complete with video tutorials and text instructions that are easily modifiable for each patient, our intended outcome is to increase patient buy-in and commitment to exercise routines while reducing workload for physiotherapists. 
+                            p These are 
+                                b primarily accessed off-site
+                                |, with patients being able to use their phones or even printed sheets depending on what they’re comfortable with.
+                        
+                    p By providing a centralized recovery guide complete with video tutorials and text instructions that are easily modifiable for each patient, our intended outcome is to 
+                        b increase patient buy-in and commitment to exercise routines while reducing workload for physiotherapists. 
                     
                 section                    
                     h3 Physiotherapist View
-                    p We considered how a physiotherapist would create a new back exercise that will be added to a new exercise routine for a patient.
+                    
+                    section
+                        p We considered how a physiotherapist would create a new back exercise that will be added to a new exercise routine for a patient.
                     
                     section
                         h4 Creating a new exercise
-                        p Once signed into RCP’s website, the home exercise program can be accessed in the navigation. From then, a physiotherapist would select the ‘Back’ category and create a new exercise my filling out a form. In this form, there is a field to describe the benefit or value of the exercise to help patients understand how this exercise is helpful. Videos may be uploaded as it is a common and effective form of explanation for exercises.
+                        
+                        div(class="img-wrapper")
+                            a(target="_blank" href="img/RCP/userflows/User Flows_Creating a new exercise.png")
+                                img(src="img/RCP/userflows/User Flows_Creating a new exercise.png" alt="physiotherapist view: creating a new exercise" class="blur lazyload")
+            
+                        p Once signed into RCP’s website, the home exercise program can be accessed in the navigation. From then, a physiotherapist would select the ‘Back’ category and create a new exercise by filling out a form. In this form, there is a field to describe the benefit or value of the exercise to help patients understand how this exercise is helpful. Videos may be uploaded as it is a common and effective form of explanation for exercises.
 
+                    section
                         h4 Creating a new routine
+                        
+                        div(class="img-wrapper")
+                            a(target="_blank" href="img/RCP/userflows/User Flows_Creating a new routine.png")
+                                img(src="img/RCP/userflows/User Flows_Creating a new routine.png" alt="physiotherapist view: creating a new routine" class="blur lazyload")
+
                         p To add this exercise as part of a new routine, navigate to the ‘Patients’ dropdown then select a patient. Within the patient’s profile – which has no medical information, adding a new routine will prompt the physiotherapist to look for exercises based on category. Exercise templates are easily customized by reps and sets as needed for a patient.
 
-                        h4 Making it available
+                    section
+                        h4 Releasing routines
+                        
+                        div(class="img-wrapper")
+                            a(target="_blank" href="img/RCP/userflows/User Flows_ReleasingRoutines.png")
+                                img(src="img/RCP/userflows/User Flows_ReleasingRoutines.png" alt="physiotherapist view: releasing routines" class="blur lazyload")
+                    
                         p When more exercises are added, the exercise routine may be viewed via ‘Preview Routine’. From here, the physiotherapist may ‘Save’ so that the patient receives it digitally when they login or ‘Print’ if the patient requests a physical version. This PDF also serves as a branded touchpoint.
 
                 section                    
                     h3 Patient View
-                    p We considered how a patient would go through their exercise routine on their mobile phones and make note of any questions or concerns to bring up with their physiotherapist.
+                    
+                    section
+                        p We considered how a patient would go through their exercise routine on their mobile phones and make note of any questions or concerns to bring up with their physiotherapist.
                     
                     section
                         h4 Exercising along
+                        
+                        div(class="img-wrapper")
+                            img(src="img/RCP/userflows/User Flows_Exercising along.png" data-src="img/RCP/userflows/User Flows_Exercising along.png" data-action="zoom" alt="patient view: exercising along" class="blur lazyload")
+                                
                         p Once signed into the RCP’s website, the HEP can be accessed in the navigation and their latest routine consisting of a list of exercises will be displayed. Clicking on an exercise will direct to a detailed page for further explanation.
 
-                        h4  in the moment
+                    section
+                        h4  Catching concerns
+                        
+                        div(class="img-wrapper")
+                            img(src="img/RCP/userflows/User Flows_Catching concerns.png" data-src="img/RCP/userflows/User Flows_Catching concerns.png" data-action="zoom" alt="patient view: catching concerns" class="blur lazyload")
+                            
                         p If a patient encounter any questions or concerns, such as areas of discomfort, at any time during an exercise, they may tap on the floating note button to document it and share it with their physiotherapist at their next session. Archived notes are accessed via the navigation.
 
+                    section
                         h4 Retrieving old routines
+                        
+                        div(class="img-wrapper")
+                            img(src="img/RCP/userflows/User Flows_Retrieving old routines.png" data-src="img/RCP/userflows/User Flows_Retrieving old routines.png" data-action="zoom" alt="patient view: retrieving old routines" class="blur lazyload")
+                            
                         p Also within this archive are old exercise routines where patients also have the option to print or download as a PDF. With some patients asking their physiotherapist for copies of their old exercises as discovered through our interviews, the HEP web platform affords the ability to access it while saving physiotherapists the time to look for it.
 
-
-
+            div(class="container")
+                h2 Iteration
+                
+                div(class="video-wrapper")
+                        video(controls disablepictureinpicture preload controlsList="nodownload")
+                            source(src="video/RCP/RefinedUIPrototype.mp4" type="video/mp4")
+    
+            
             div(class="container")
                 h2 Reflection
                 
@@ -166,3 +285,5 @@ html(lang="en")
         script(src="js/jquery-3.3.1.min.js")
         script(src="js/transition.min.js")
         script(src="js/zoom.min.js")
+        script(src="js/swiper.min.js")
+        script(src="js/swiper-initialize.js")
