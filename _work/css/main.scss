@@ -180,6 +180,14 @@ h4 {
     color: $light-grey;
 }
 
+figcaption {
+    display: flex;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-style: italic;
+    margin: -1rem 0 3rem;
+}
+
 p.quote {
     font-size: 1.5rem;
     text-align: center;
@@ -675,7 +683,7 @@ footer {
 }
 
 .knack-mobile-carousel-image {
-    @include mobile-carousel-image(20%);
+    @include mobile-carousel-image(60%);
     background-color: $knack-red;
 }
 
@@ -723,6 +731,16 @@ footer {
             }
         }
     }
+}
+
+span.new {
+    color: white;
+    background: black;
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
+    margin-left: 0.5rem;
+    position: relative;
+    top: -0.1rem;
 }
 
 
@@ -784,6 +802,8 @@ body:not(#homepage) {
     
     & img {
        width: auto; 
+       border: 1px solid #a3a3a3;
+       box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -990,7 +1010,17 @@ body:not(#homepage) {
     }
 }
 
-@media (min-width: 1615px) {
+@media (min-width: 1919px) {
+    .hero-banner {
+        height: 53vh;
+        
+        & .brief-bio {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media (min-width: 1615px) and (max-width: 1918px) {
     .hero-banner .brief-bio {
         font-size: 4.75rem;
     }
@@ -1292,6 +1322,10 @@ body:not(#homepage) {
             }
         }
     }
+    
+    span.new {
+        top: 0;
+    }
 }
 
 @media (min-width: 652px) and (max-width: 768px) {
@@ -1382,6 +1416,14 @@ body:not(#homepage) {
 
     .project-carousel .project-wrapper .project-name {
         height: fit-content;
+    }
+    
+    .rcp-brief .project-name {
+        display: inline !important;
+    }
+    
+    span.new {
+        top: -0.1rem;
     }
 }
 

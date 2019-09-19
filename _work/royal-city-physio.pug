@@ -35,11 +35,11 @@ html(lang="en")
                     p Web Platform
                 div(class="flex-wrapper")
                     div(class="col-60")
-                        p Royal City Physio (RCP) is an independent local physiotherapy clinic that prides itself on providing a high quality of individualized care through manual therapy, sports rehabilitation, and acute chronic injury treatments from children to athletes.
+                        p Royal City Physio (RCP) is an independent local physiotherapy clinic that prides itself on providing high quality individualized care through manual therapy, sports rehabilitation, and acute chronic injury treatments from children to athletes.
 
                         p We created a Home Exercise Program web platform that gives physiotherapists the ability to create and share ever-changing exercise routines for their patients. Our goal is to extend RCP’s quality of care from in-clinic to the post-session recovery stage. 
                         
-                        p My role in this project was mainly focused on leading the team, interviewing, journey mapping, creating participatory workshops and facilitating it with RCP, ideation, content writing, and UI design.
+                        p My role in this project was mainly focused on leading the team, interviewing, journey mapping, creating participatory workshops and facilitating it with RCP, ideation, content writing, user flows, and UI design.
 
                     div(class="col-40 project-summary")
                         h4 Team
@@ -47,7 +47,7 @@ html(lang="en")
                         h4 Type
                         p Academic
                         h4 Role
-                        p UX research, Ideation, Content writing and strategy, UI design
+                        p UX research, Ideation, Content writing and strategy, User flows, UI design
                         h4 Tools
                         p Illustrator, Figma
                         h4 Duration
@@ -96,7 +96,7 @@ html(lang="en")
                                 | to get there. When patients do not understand exercise instructions, they tend to wait until the next session to clarify, delaying their recovery. As well, not all patients have access to their physiotherapist’s contact information.
                     
                 section
-                    h3 Finding the Opportunity
+                    h3 Design Problem and Focus
                     
                     div(class="multi-page-swiper-container")          
                         div(id="rcp-personas")
@@ -114,10 +114,7 @@ html(lang="en")
                     div(class="img-wrapper")
                         img(src="img/RCP/journeyframework.png" data-src="img/RCP/journeyframework.png" data-action="zoom" alt="journey framework with all personas" class="blur lazyload")   
 
-                    p We created three personas and mapped them to a customer journey map to visualize the gaps that emerged between what RCP wanted to achieve in their quality of care to what patients perceived.
-                    
-                section
-                    h3 Design Problem and Focus
+                    p We created three personas and mapped them to a customer journey map to visualize the gaps that emerged between what RCP wanted to achieve in their quality of care and what patients perceived.
                     
                     div(class="img-wrapper")
                         img(src="img/RCP/designproblems.png" data-src="img/RCP/designproblems.png" data-action="zoom" alt="3 design problems for RCP" class="blur lazyload")
@@ -149,17 +146,32 @@ html(lang="en")
                     
                     ol
                         li Patients share recovery tips and artifacts, such as PDFs of their exercise routines, with friends and family which is a source of word-of-mouth customer acquisition.
-                        li Patients share recovery tips and artifacts, such as PDFs of their exercise routines, with friends and family which is a source of word-of-mouth customer acquisition.
-                        li Showing rather than telling, such as through video recording, ensures better adherence to exercise routines and improves patient recovery.
+                        li Patients tend to have greater buy-in when they see the connection between exercises and the tangible results it offers.
+                        li Showing rather than telling, specifically through video recording, ensures better adherence to exercise routines and improves patient recovery.
 
-            div(class="container")
-                h2 Constraints
-                
                 section
-                    p There were 2 constraints we had to keep in mind:
-                    ol
-                        li Small business with limited resources. A fully-featured app is cost-prohibitive therefore to keep development costs, our solution should be focused solely on the creation and sharing of changing exercise routines.
-                        li No collection or access of sensitive patient information. Medical data certification requires certification and a specialized developer which can raise development costs. Patients and physiotherapists would therefore access the platform using standard logins, with no tie-in to existing platforms that have patient information.
+                    h3 Constraints
+                
+                    section
+                        p There were 2 constraints we had to keep in mind:
+                        ol
+                            li Small business with limited resources. A fully-featured app is cost-prohibitive therefore to keep development costs, our solution should be focused solely on the creation and sharing of changing exercise routines.
+                            li No collection or access of sensitive patient information. Medical data certification requires certification and a specialized developer which can raise development costs. Patients and physiotherapists would therefore access the platform using standard logins, with no tie-in to existing platforms that have patient information.
+                        
+                section
+                    h3 User Flows                      
+
+                    div(class="img-wrapper")
+                        img(src="img/RCP/UserFlow_physiotherapistview.png" data-src="img/RCP/UserFlow_physiotherapistview.png" data-action="zoom" alt="user flow for physiotherapist" class="blur lazyload")
+                    figcaption Physiotherapist View
+
+                    div(class="img-wrapper")
+                        img(src="img/RCP/UserFlow_patientview.png" data-src="img/RCP/UserFlow_patientview.png" data-action="zoom" alt="user flow for patient" class="blur lazyload")
+                    figcaption Patient View
+                    
+                    section
+                        p I created a refined set of user flows of key use cases for both the physiotherapist and the patient view to help guide the team in creating high-fidelity mockups.
+
 
             div(class="container")
                 h2 Proposal
@@ -193,19 +205,19 @@ html(lang="en")
                         
                     p By providing a centralized recovery guide complete with video tutorials and text instructions that are easily modifiable for each patient, our intended outcome is to 
                         b increase patient buy-in and commitment to exercise routines while reducing workload for physiotherapists. 
-                    
+                
                 section                    
                     h3 Physiotherapist View
                     
                     section
-                        p We considered how a physiotherapist would create a new back exercise that will be added to a new exercise routine for a patient.
+                        p I worked with my team to develop a mockup that considers how a physiotherapist would create a new back exercise that will be added to a new exercise routine for a patient. 
                     
                     section
                         h4 Creating a new exercise
                         
                         div(class="img-wrapper")
-                            a(target="_blank" href="img/RCP/userflows/User Flows_Creating a new exercise.png")
-                                img(src="img/RCP/userflows/User Flows_Creating a new exercise.png" alt="physiotherapist view: creating a new exercise" class="blur lazyload")
+                            a(target="_blank" href="img/RCP/userflows/User Flows_CreatingANewExercise.png")
+                                img(src="img/RCP/userflows/User Flows_CreatingANewExercise.png" alt="physiotherapist view: creating a new exercise" class="blur lazyload")
             
                         p Once signed into RCP’s website, the home exercise program can be accessed in the navigation. From then, a physiotherapist would select the ‘Back’ category and create a new exercise by filling out a form. In this form, there is a field to describe the benefit or value of the exercise to help patients understand how this exercise is helpful. Videos may be uploaded as it is a common and effective form of explanation for exercises.
 
@@ -213,8 +225,8 @@ html(lang="en")
                         h4 Creating a new routine
                         
                         div(class="img-wrapper")
-                            a(target="_blank" href="img/RCP/userflows/User Flows_Creating a new routine.png")
-                                img(src="img/RCP/userflows/User Flows_Creating a new routine.png" alt="physiotherapist view: creating a new routine" class="blur lazyload")
+                            a(target="_blank" href="img/RCP/userflows/User Flows_CreatingANewRoutine.png")
+                                img(src="img/RCP/userflows/User Flows_CreatingANewRoutine.png" alt="physiotherapist view: creating a new routine" class="blur lazyload")
 
                         p To add this exercise as part of a new routine, navigate to the ‘Patients’ dropdown then select a patient. Within the patient’s profile – which has no medical information, adding a new routine will prompt the physiotherapist to look for exercises based on category. Exercise templates are easily customized by reps and sets as needed for a patient.
 
@@ -231,13 +243,13 @@ html(lang="en")
                     h3 Patient View
                     
                     section
-                        p We considered how a patient would go through their exercise routine on their mobile phones and make note of any questions or concerns to bring up with their physiotherapist.
+                        p We also considered how a patient would go through their exercise routine on their mobile phones and make note of any questions or concerns to bring up with their physiotherapist.
                     
                     section
                         h4 Exercising along
                         
                         div(class="img-wrapper")
-                            img(src="img/RCP/userflows/User Flows_Exercising along.png" data-src="img/RCP/userflows/User Flows_Exercising along.png" data-action="zoom" alt="patient view: exercising along" class="blur lazyload")
+                            img(src="img/RCP/userflows/User Flows_ExercisingAlong.png" data-src="img/RCP/userflows/User Flows_ExercisingAlong.png" data-action="zoom" alt="patient view: exercising along" class="blur lazyload")
                                 
                         p Once signed into the RCP’s website, the HEP can be accessed in the navigation and their latest routine consisting of a list of exercises will be displayed. Clicking on an exercise will direct to a detailed page for further explanation.
 
@@ -245,7 +257,7 @@ html(lang="en")
                         h4  Catching concerns
                         
                         div(class="img-wrapper")
-                            img(src="img/RCP/userflows/User Flows_Catching concerns.png" data-src="img/RCP/userflows/User Flows_Catching concerns.png" data-action="zoom" alt="patient view: catching concerns" class="blur lazyload")
+                            img(src="img/RCP/userflows/User Flows_CatchingConcerns.png" data-src="img/RCP/userflows/User Flows_CatchingConcerns.png" data-action="zoom" alt="patient view: catching concerns" class="blur lazyload")
                             
                         p If a patient encounter any questions or concerns, such as areas of discomfort, at any time during an exercise, they may tap on the floating note button to document it and share it with their physiotherapist at their next session. Archived notes are accessed via the navigation.
 
@@ -253,7 +265,7 @@ html(lang="en")
                         h4 Retrieving old routines
                         
                         div(class="img-wrapper")
-                            img(src="img/RCP/userflows/User Flows_Retrieving old routines.png" data-src="img/RCP/userflows/User Flows_Retrieving old routines.png" data-action="zoom" alt="patient view: retrieving old routines" class="blur lazyload")
+                            img(src="img/RCP/userflows/User Flows_RetrievingOldRoutines.png" data-src="img/RCP/userflows/User Flows_RetrievingOldRoutines.png" data-action="zoom" alt="patient view: retrieving old routines" class="blur lazyload")
                             
                         p Also within this archive are old exercise routines where patients also have the option to print or download as a PDF. With some patients asking their physiotherapist for copies of their old exercises as discovered through our interviews, the HEP web platform affords the ability to access it while saving physiotherapists the time to look for it.
 
@@ -262,7 +274,20 @@ html(lang="en")
                 
                 div(class="video-wrapper")
                         video(controls disablepictureinpicture preload controlsList="nodownload")
-                            source(src="video/RCP/RefinedUIPrototype.mp4" type="video/mp4")
+                            source(src="video/RCP/refined-ui-prototype.mp4" type="video/mp4")
+                            
+                p I revisited the desktop interface to address a few usability concerns:
+                    
+                ol
+                    li 
+                        b Removing Redundancy: 
+                        | In the UI revision, clicking on HEP in the navigation takes a user directly to the database. I removed the first page of categories in the original UI as exploring and adding new categories are already affordances in the following page, the exercise database.
+                    li 
+                        b Consistent Navigation: 
+                        | There is no longer a dropdown for HEP in the top navigation. In the original UI, logging in as either physiotherapist or patient results in two different dropdowns in the navigation. By creating different variations on a site-wide element such as the navigation, a person may suspect what else might not be consistent on the site.
+                    li 
+                        b Appropriate scale: 
+                        | The iteration is scaled down from the large fonts, very wide elements, and large white spaces of the original UI. The screen real estate is better utilized on desktop whereas before it could be mistaken for tablet-sized viewing. Particularly for the physiotherapist view where most physiotherapists are in their 30s or 40s, slightly smaller fonts and elements than the original would be comfortable for this age demographic.
     
             
             div(class="container")

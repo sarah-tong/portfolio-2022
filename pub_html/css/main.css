@@ -432,6 +432,17 @@ h4 {
   margin-bottom: 0;
   color: #A6A8AB; }
 
+figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin: -1rem 0 3rem; }
+
 p.quote {
   font-size: 1.5rem;
   text-align: center;
@@ -1053,7 +1064,7 @@ footer {
   display: none;
   background-color: #ed2424; }
   .knack-mobile-carousel-image img {
-    width: 20%;
+    width: 60%;
     height: auto; }
 
 .intl-coop-mobile-carousel-image {
@@ -1119,6 +1130,15 @@ footer {
       .project-carousel .project-wrapper:hover p {
         color: #ED534C; }
 
+span.new {
+  color: white;
+  background: black;
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+  margin-left: 0.5rem;
+  position: relative;
+  top: -0.1rem; }
+
 body:not(#homepage) {
   line-height: 1.5; }
 
@@ -1167,7 +1187,10 @@ body:not(#homepage) {
 .hep-screenshot {
   height: 35rem; }
   .hep-screenshot img {
-    width: auto; }
+    width: auto;
+    border: 1px solid #a3a3a3;
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25); }
 
 #rcp .quote-highlight {
   background: #ffead9; }
@@ -1368,7 +1391,13 @@ body:not(#homepage) {
     width: 100rem;
     margin: 0 auto; } }
 
-@media (min-width: 1615px) {
+@media (min-width: 1919px) {
+  .hero-banner {
+    height: 53vh; }
+    .hero-banner .brief-bio {
+      font-size: 6rem; } }
+
+@media (min-width: 1615px) and (max-width: 1918px) {
   .hero-banner .brief-bio {
     font-size: 4.75rem; } }
 
@@ -1566,7 +1595,9 @@ body:not(#homepage) {
     .project-carousel .project-wrapper:hover p, .project-carousel .project-wrapper:focus p, .project-carousel .project-wrapper:active p {
       color: #404041; }
     .project-carousel .project-wrapper:hover .project-category, .project-carousel .project-wrapper:focus .project-category, .project-carousel .project-wrapper:active .project-category {
-      color: #A6A8AB; } }
+      color: #A6A8AB; }
+  span.new {
+    top: 0; } }
 
 @media (min-width: 652px) and (max-width: 768px) {
   .intl-coop-mobile-carousel-image img {
@@ -1619,7 +1650,11 @@ body:not(#homepage) {
   .project-carousel .project-wrapper .project-name {
     height: -webkit-fit-content;
     height: -moz-fit-content;
-    height: fit-content; } }
+    height: fit-content; }
+  .rcp-brief .project-name {
+    display: inline !important; }
+  span.new {
+    top: -0.1rem; } }
 
 @media (max-height: 675px) and (max-width: 992px) and (min-width: 576px) {
   .hero-banner {
