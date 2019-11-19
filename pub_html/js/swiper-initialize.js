@@ -1,8 +1,8 @@
 var homepageSwiper = new Swiper('.swiper-container', {
 
     loop: false,
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
     spaceBetween: 80,
 
     // Navigation arrows
@@ -20,7 +20,7 @@ var homepageSwiper = new Swiper('.swiper-container', {
         1920: {
             slidesPerView: 3,
             slidesPerGroup: 3,
-            spaceBetween: 150,
+            spaceBetween: 100,
         },
 
         1691: {
