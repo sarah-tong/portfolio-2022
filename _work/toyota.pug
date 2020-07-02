@@ -17,16 +17,20 @@ html(lang="en")
 
         link(rel="stylesheet" href="css/main.css")
 
-    body
+    body(id="toyota")
                  
         div(class="page-content animate-bottom")
         
             include nav-inactive.pug
 
             div(class="full-width-container")
-                div(class="project-banner")
+                //div(class="project-banner")
                     div(class="video-wrapper")
                         iframe(src="https://player.vimeo.com/video/246351729?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+                        
+                div(class="project-banner")
+                    div(class="img-wrapper")
+                        img(src="img/Toyota/toyota-camry.jpg" alt="photo of two toyota camrys")
             
             div(class="container introduction")
                 div(class="project-header")
@@ -130,6 +134,10 @@ html(lang="en")
                     h3 The Prototype
                     
                     section
+                        div(class="video-wrapper")
+                            iframe(src="https://player.vimeo.com/video/246351729?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+                    
+                    section
                         h4 Onboarding
                         div(class="flex-wrapper align-items-center")
                             div(class="col-50")
@@ -211,6 +219,7 @@ html(lang="en")
             div(class="container more-projects")
                 h4 More Projects
                 div(class="more-project-link-wrapper")
+                    a(class="more-project-link" href="guusto.html") Guusto
                     a(class="more-project-link" href="via-rail.html") VIA Rail
                     a(class="more-project-link active-link") Toyota
                     a(class="more-project-link" href="royal-city-physio.html") Royal City Physio

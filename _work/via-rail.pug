@@ -17,16 +17,20 @@ html(lang="en")
         
         link(rel="stylesheet" href="css/main.css")
 
-    body
+    body(id="via-rail")
                     
         div(class="page-content animate-bottom")
         
             include nav-inactive.pug
 
             div(class="full-width-container")
-                div(class="project-banner")
+                //div(class="project-banner")
                     div(class="video-wrapper")
                         iframe(src="https://player.vimeo.com/video/242132143?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+                        
+                div(class="project-banner")
+                    div(class="img-wrapper")
+                        img(src="img/VIA/website-static.png" alt="website preview with the words '6 Ways to Feel Canada'")
                         
             div(class="container introduction")
                 div(class="project-header")
@@ -132,6 +136,10 @@ html(lang="en")
 
                 section
                   h3 The Prototype
+                  
+                  section
+                      div(class="video-wrapper")
+                            iframe(src="https://player.vimeo.com/video/242132143?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
 
                   section
                     h4 Landing Page
@@ -185,6 +193,7 @@ html(lang="en")
             div(class="container more-projects")
                 h4 More Projects
                 div(class="more-project-link-wrapper")
+                    a(class="more-project-link" href="guusto.html") Guusto
                     a(class="more-project-link active-link") VIA Rail
                     a(class="more-project-link" href="toyota.html") Toyota
                     a(class="more-project-link" href="royal-city-physio.html") Royal City Physio

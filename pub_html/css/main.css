@@ -444,6 +444,8 @@ figcaption {
   font-size: 0.75rem;
   font-style: italic;
   margin: -1rem 0 3rem; }
+  .video-wrapper-w-caption figcaption {
+    margin: 0 0 3rem; }
 
 p.quote {
   font-size: 1.5rem;
@@ -660,7 +662,8 @@ section {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .project-banner .img-wrapper {
     height: 55vh;
     -webkit-box-align: center;
@@ -676,6 +679,13 @@ section {
     height: 100%; }
     .project-banner .img-wrapper img {
       max-width: none;
+      height: auto; }
+      #via-rail .project-banner .img-wrapper img {
+        width: 128%; }
+      #toyota .project-banner .img-wrapper img {
+        width: 128%; }
+    .img-wrapper img.mobile-mockup-img {
+      width: 80%;
       height: auto; }
   .img-wrapper a {
     cursor: zoom-in;
@@ -693,6 +703,9 @@ section {
     margin: 1rem 0; }
   .flex-wrapper .video-wrapper {
     margin: 0; }
+
+.multiple-video-container .video-wrapper-w-caption:not(:first-of-type) {
+  margin: 3rem 0 1rem; }
 
 iframe,
 video {
@@ -735,35 +748,39 @@ video {
   -webkit-filter: blur(0);
   filter: blur(0); }
 
-.more-projects .more-project-link-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 2rem;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-.more-projects .more-project-link-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.more-projects .more-project-link {
-  font-size: 0.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  height: 2.5rem;
-  text-decoration: none; }
-  .more-projects .more-project-link:hover {
-    color: #ED534C; }
-  .more-projects .more-project-link.active-link {
-    color: #ED534C;
-    cursor: default; }
+.more-projects {
+  width: 100% !important;
+  max-width: 65rem;
+  padding: 0 1rem; }
+  .more-projects h4 {
+    text-align: center; }
+  .more-projects .more-project-link-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .more-projects .more-project-link-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .more-projects .more-project-link {
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    height: 2.5rem;
+    text-decoration: none; }
+    .more-projects .more-project-link:hover {
+      color: #ED534C; }
+    .more-projects .more-project-link.active-link {
+      color: #ED534C;
+      cursor: default; }
 
 footer {
   text-align: center;
@@ -901,9 +918,6 @@ footer {
     width: 120%; }
   .guusto-image-popup img {
     top: 10%; }
-
-.guusto-brief a {
-  cursor: default; }
 
 .rcp-image-popup {
   display: -webkit-box;
@@ -1329,7 +1343,7 @@ body:not(#homepage) {
   -ms-flex-pack: center;
   justify-content: center; }
   #railyard .project-banner .img-wrapper img {
-    width: 16%;
+    width: 10%;
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none; }
@@ -1372,6 +1386,28 @@ body:not(#homepage) {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none; }
+
+#guusto #content-first .multiple-video-container .video-wrapper-w-caption:first-of-type {
+  margin-top: 0; }
+
+#guusto .project-banner .img-wrapper img {
+  margin-top: 25rem; }
+
+#guusto .video-wrapper {
+  padding: 65.625% 0 0 0;
+  -webkit-box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem; }
+
+#guusto section > .multiple-video-container:not(:first-of-type) .video-wrapper-w-caption:first-of-type {
+  margin: 4rem 0 0; }
+
+#guusto section > .video-wrapper-w-caption {
+  margin: 4rem 0 0; }
+
+#guusto section [class*="col"]:first-of-type, #guusto section [class*="col"]:last-of-type {
+  padding: 0; }
 
 #about h1 {
   text-align: left;
@@ -1575,6 +1611,10 @@ body:not(#homepage) {
     width: 115%; }
   .hero-banner .brief-bio {
     font-size: 3.5rem; }
+  .more-projects {
+    max-width: 51rem; }
+  #guusto .project-banner .img-wrapper img {
+    margin-top: 7rem; }
   @-webkit-keyframes arrow-bounce-prev {
     0% {
       left: -4rem; }
@@ -1643,12 +1683,9 @@ body:not(#homepage) {
       #intl-coop .project-banner .img-wrapper img {
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
+        left: unset;
         bottom: 0;
-        margin: auto;
-        height: 100%;
-        width: auto; }
+        margin: auto; }
     #sma .project-banner .img-wrapper img {
       position: absolute;
       top: 0;
@@ -1657,13 +1694,25 @@ body:not(#homepage) {
       bottom: 0;
       margin: auto;
       width: 25%; }
-  .more-projects .more-project-link-wrapper {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-  .more-projects .more-project-link {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 50%;
-    flex: 1 1 50%; } }
+    #guusto .project-banner .img-wrapper img {
+      margin-top: 0; }
+    #via-rail .project-banner .img-wrapper img, #toyota .project-banner .img-wrapper img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: unset;
+      margin: auto; }
+  .more-projects {
+    width: 80% !important;
+    max-width: unset;
+    padding: 0; }
+    .more-projects .more-project-link-wrapper {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .more-projects .more-project-link {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+      flex: 1 1 50%; } }
 
 @media (max-width: 811px) {
   .intl-coop-image-popup.show img {
@@ -1861,7 +1910,10 @@ body:not(#homepage) {
   .more-projects .more-project-link {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 100%;
-    flex: 1 0 100%; } }
+    flex: 1 0 100%; }
+  .img-wrapper img.mobile-mockup-img {
+    width: 100%;
+    height: auto; } }
 
 @media (max-height: 675px) and (max-width: 992px) and (min-width: 576px) {
   .hero-banner {

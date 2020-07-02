@@ -198,6 +198,10 @@ figcaption {
     font-size: 0.75rem;
     font-style: italic;
     margin: -1rem 0 3rem;
+    
+    .video-wrapper-w-caption & {
+        margin: 0 0 3rem;
+    }
 }
 
 p.quote {
@@ -486,6 +490,7 @@ section {
     line-height: 0;
     display: flex;
     justify-content: center;
+    position: relative;
 
     .project-banner & {
         height: 55vh;
@@ -501,6 +506,19 @@ section {
 
         .project-banner & {
             max-width: none;
+            height: auto;
+            
+            #via-rail & {
+                width: 128%;
+            }
+            
+            #toyota & {
+                width: 128%;
+            }
+        }
+        
+        &.mobile-mockup-img {
+            width: 80%;
             height: auto;
         }
     }
@@ -530,6 +548,19 @@ section {
         margin: 0;
     }
 }
+
+.multiple-video-container {
+    & .video-wrapper-w-caption:not(:first-of-type) {
+        margin: 3rem 0 1rem;  
+    }
+}
+
+//.video-wrapper-w-caption {
+//    & span.caption {
+//        font-size: 0.875rem;
+//        color: $light-grey;
+//    } 
+//}
 
 iframe,
 video {
@@ -580,6 +611,14 @@ video {
 
 
 .more-projects {
+    
+    width: 100% !important;
+    max-width: 65rem;
+    padding: 0 1rem;
+    
+    & h4 {
+        text-align: center;
+    }
     
     & .more-project-link-wrapper {
         display: flex;
@@ -675,10 +714,6 @@ footer {
     & img {
         top: 10%;
     }
-}
-
-.guusto-brief a {
-    cursor: default;
 }
 
 .rcp-image-popup {
@@ -902,7 +937,7 @@ body:not(#homepage) {
         justify-content: center;
 
         & img {
-            width: 16%;
+            width: 10%;
             flex: none;
         }
     }
@@ -963,6 +998,44 @@ body:not(#homepage) {
         }
     }
 }
+
+// Guusto 
+
+#guusto {
+    
+    & #content-first .multiple-video-container .video-wrapper-w-caption:first-of-type  {
+        margin-top: 0;
+    }
+
+    & .project-banner .img-wrapper img {
+        margin-top: 25rem;
+    }
+
+    & .video-wrapper {
+        padding: 65.625% 0 0 0;
+        -webkit-box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0.1875rem 0.1875rem 0.3125rem 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 0.5rem;
+        border-radius: 0.3rem;
+    }
+    
+    & section > .multiple-video-container:not(:first-of-type) {
+        & .video-wrapper-w-caption:first-of-type {
+            margin: 4rem 0 0;  
+        }
+    }
+    
+    & section > .video-wrapper-w-caption {
+        margin: 4rem 0 0;  
+    }
+    
+    section {
+        [class*="col"]:first-of-type, [class*="col"]:last-of-type {
+            padding: 0;
+        }
+    }
+}
+
 
 // About
 #about {
@@ -1186,6 +1259,16 @@ body:not(#homepage) {
             font-size: 3.5rem;
         }
     }
+    
+    .more-projects {
+        max-width: 51rem;
+    }
+
+    .project-banner .img-wrapper {
+        #guusto & img {
+            margin-top: 7rem;
+        }
+    }
 
     @keyframes arrow-bounce-prev {
         0% {
@@ -1233,6 +1316,7 @@ body:not(#homepage) {
     .project-carousel {
         margin: 0 auto;
     }
+    
 }
 
 @media (max-width: 890px) {
@@ -1287,12 +1371,11 @@ body:not(#homepage) {
                 & img {
                     position: absolute;
                     top: 0;
-                    left: 0;
-                    right: 0;
+                    left: unset;
                     bottom: 0;
                     margin: auto;
-                    height: 100%;
-                    width: auto;
+//                    height: 100%;
+//                    width: auto;
                 }
             }
 
@@ -1305,10 +1388,26 @@ body:not(#homepage) {
                 margin: auto;
                 width: 25%;
             }
+            
+            #guusto & img {
+                margin-top: 0;
+            }
+            
+            #via-rail & img, #toyota & img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: unset;
+                margin: auto;
+            }
         }
     }
     
     .more-projects {
+        
+        width: 80% !important;
+        max-width: unset;
+        padding: 0;
     
         & .more-project-link-wrapper {
             flex-wrap: wrap;
@@ -1620,6 +1719,11 @@ body:not(#homepage) {
         & .more-project-link {
             flex: 1 0 100%;
         }
+    }
+    
+    .img-wrapper img.mobile-mockup-img {
+        width: 100%;
+        height: auto;
     }
 }
 
