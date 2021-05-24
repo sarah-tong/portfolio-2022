@@ -12,6 +12,7 @@ $muted-orange: #faded8;
 $muted-blue: #d0e4f2;
 $muted-teal: #D8E5E3;
 
+$guusto-teal: #53c2be;
 $sma-blue: #4696CC;
 $dossier-orange: #E45A3D;
 $knack-red: #ed2424;
@@ -612,9 +613,9 @@ video {
 
 .more-projects {
     
-    width: 100% !important;
-    max-width: 65rem;
-    padding: 0 1rem;
+//    width: 100% !important;
+//    max-width: 65rem;
+//    padding: 0 1rem;
     
     & h4 {
         text-align: center;
@@ -624,6 +625,7 @@ video {
         display: flex;
         margin-top: 2rem;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     
     & .more-project-link-column {
@@ -637,6 +639,7 @@ video {
         text-transform: uppercase;
         height: 2.5rem;
         text-decoration: none;
+        flex: 1 1 50%;
 
         &:hover {
             color: #ED534C;
@@ -645,6 +648,38 @@ video {
         &.active-link {
             color: #ED534C;
             cursor: default;
+        }
+        
+        &:nth-of-type(1) {
+            order: 1;
+        }
+        
+        &:nth-of-type(2) {
+            order: 3;
+        }
+        
+        &:nth-of-type(3) {
+            order: 5;
+        }
+        
+        &:nth-of-type(4) {
+            order: 7;
+        }
+        
+        &:nth-of-type(5) {
+            order: 2;
+        }
+        
+        &:nth-of-type(6) {
+            order: 4;
+        }
+        
+        &:nth-of-type(7) {
+            order: 6;
+        }
+        
+        &:nth-of-type(8) {
+            order: 8;
         }
     }
 }
@@ -708,6 +743,16 @@ footer {
     @include image-popup(150%);
 }
 
+.guusto-product-image-popup {
+    @include image-popup(25rem);
+    background-color: $guusto-teal;
+    
+    & img {
+        border-radius: 0.5rem;
+        box-shadow: 0 0 3rem rgba(0,0,0,.15);
+    }
+}
+
 .guusto-image-popup {
     @include image-popup(120%);
     
@@ -766,6 +811,16 @@ footer {
 
 .toyota-mobile-carousel-image {
     @include mobile-carousel-image(150%);
+}
+
+.guusto-product-mobile-carousel-image {
+    @include mobile-carousel-image(11rem);
+    background-color: $guusto-teal;
+    
+    & img {
+        border-radius: 0.25rem;
+        box-shadow: 0 0 1rem rgba(0,0,0,.15);
+    }
 }
 
 .guusto-mobile-carousel-image {
@@ -874,6 +929,17 @@ body:not(#homepage) {
         font-size: 1.25rem;
         margin: -1rem 0 0 0;
         text-align: center;
+    }
+}
+
+.mockup-dropshadow-container {
+    
+    & img {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+    
+    & figcaption {
+        margin: -0.25rem 0 3rem;
     }
 }
 
@@ -1001,7 +1067,7 @@ body:not(#homepage) {
 
 // Guusto 
 
-#guusto {
+#guusto-website {
     
     & #content-first .multiple-video-container .video-wrapper-w-caption:first-of-type  {
         margin-top: 0;
@@ -1032,6 +1098,19 @@ body:not(#homepage) {
     section {
         [class*="col"]:first-of-type, [class*="col"]:last-of-type {
             padding: 0;
+        }
+    }
+}
+
+#guusto-product {
+    & .project-banner .img-wrapper {
+        background: $guusto-teal;
+        justify-content: center;
+
+        & img {
+            max-width: 25rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 3rem rgba(0,0,0,.15);
         }
     }
 }
@@ -1265,7 +1344,7 @@ body:not(#homepage) {
     }
 
     .project-banner .img-wrapper {
-        #guusto & img {
+        #guusto-website & img {
             margin-top: 7rem;
         }
     }
@@ -1389,7 +1468,17 @@ body:not(#homepage) {
                 width: 25%;
             }
             
-            #guusto & img {
+            #guusto-product & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 70%;
+            }
+            
+            #guusto-website & img {
                 margin-top: 0;
             }
             
@@ -1403,20 +1492,20 @@ body:not(#homepage) {
         }
     }
     
-    .more-projects {
-        
-        width: 80% !important;
-        max-width: unset;
-        padding: 0;
-    
-        & .more-project-link-wrapper {
-            flex-wrap: wrap;
-        }
-
-        & .more-project-link {
-            flex: 1 1 50%;
-        }
-    }
+//    .more-projects {
+//        
+//        width: 80% !important;
+//        max-width: unset;
+//        padding: 0;
+//    
+//        & .more-project-link-wrapper {
+//            flex-wrap: wrap;
+//        }
+//
+//        & .more-project-link {
+//            flex: 1 1 50%;
+//        }
+//    }
 }
 
 @media (max-width: 811px) {
@@ -1525,7 +1614,9 @@ body:not(#homepage) {
     .railyard-image-popup,
     .knack-image-popup,
     .intl-coop-image-popup,
-    .sma-image-popup, .guusto-image-popup {
+    .sma-image-popup, 
+    .guusto-image-popup,
+    .guusto-product-image-popup{
         &.show {
             display: none;
         }
@@ -1682,6 +1773,12 @@ body:not(#homepage) {
         width: 200%;
     }
     
+    .guusto-product-mobile-carousel-image img {
+        width: 80%;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 1rem rgba(0,0,0,.15);
+    }
+    
     .guusto-mobile-carousel-image img {
         width: 150%;
     }
@@ -1718,6 +1815,10 @@ body:not(#homepage) {
 
         & .more-project-link {
             flex: 1 0 100%;
+            
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8) {
+                order: revert;
+            }
         }
     }
     

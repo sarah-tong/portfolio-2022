@@ -50,6 +50,8 @@ html(lang="en")
                     p(class="mobile-brief-bio") Hello there, I’m Sarah. I’m a UX designer with an eye for design details and the bigger business picture.
                     div(class="down-arrow-container")
                         a(href="#carousel" class="down-arrow") &#8595;
+                    div(class="guusto-product-image-popup")
+                        img(src="img/Guusto/guusto-card.png" alt="guusto gift card")
                     div(class="guusto-image-popup")
                         img(src="img/Guusto/homepage-banner.jpg" alt="people giving each other a high five")
                     div(class="VIA-image-popup")
@@ -74,14 +76,22 @@ html(lang="en")
                 div(class="swiper-container project-carousel")
                     div(class="swiper-wrapper")
                     
+                        div(class="swiper-slide project-wrapper guusto-product-brief")  
+                            a(href="guusto-product.html")
+                                div(class="guusto-product-mobile-carousel-image")
+                                    img(src="img/Guusto/guusto-card.png" alt="guusto gift card")
+                                p(class="project-name") Guusto
+                                p(class="project-description") Currently redesigning the product experience at a startup seeking to modernize employee recognition.
+                                p(class="project-category") Product Design
+                        
                         div(class="swiper-slide project-wrapper guusto-brief")  
-                            a(href="guusto.html")
+                            a(href="guusto-website.html")
                                 div(class="guusto-mobile-carousel-image")
                                     img(src="img/Guusto/homepage-banner.jpg" alt="people giving each other a high five")
                                 p(class="project-name") Guusto
                                     // span(class="coming-soon") coming soon
-                                p(class="project-description") Currently polishing the web and product experience at a startup seeking to modernize employee recognition.
-                                p(class="project-category") Product Design, Front-End Web Development
+                                p(class="project-description") Revamped the website to better communicate employee the recognition startup's product and vision.
+                                p(class="project-category") Front-End Dev, Product Design
 
                         div(class="swiper-slide project-wrapper VIA-brief")
                             a(href="via-rail.html")

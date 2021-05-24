@@ -10,6 +10,10 @@
 var homepageBio = document.querySelector(".brief-bio");
 var navWrapper = document.querySelector(".nav-wrapper");
 
+var guustoProductBrief = document.querySelector(".guusto-product-brief");
+var guustoProductBanner = document.querySelector(".guusto-product-image-popup");
+var guustoProductProjectWrapper = document.querySelector(".project-wrapper.guusto-product-brief ");
+
 var guustoBrief = document.querySelector(".guusto-brief");
 var guustoBanner = document.querySelector(".guusto-image-popup");
 var guustoProjectWrapper = document.querySelector(".project-wrapper.guusto-brief ");
@@ -43,6 +47,20 @@ var intlCoopProjectWrapper = document.querySelector(".project-wrapper.intl-coop-
 //var smaProjectWrapper = document.querySelector(".project-wrapper.sma-brief ");
 
 function showImagePopup() {
+    guustoProductBrief.onmouseover = function () {
+        guustoProductBanner.classList.add('show');
+        homepageBio.classList.add('hide');
+        document.body.classList.add('teal');
+        navWrapper.classList.add('teal');
+    };
+
+    guustoProductBrief.onmouseout = function () {
+        guustoProductBanner.classList.remove('show');
+        homepageBio.classList.remove('hide');
+        document.body.classList.remove('teal');
+        navWrapper.classList.remove('teal');
+    }
+    
     guustoBrief.onmouseover = function () {
         guustoBanner.classList.add('show');
         homepageBio.classList.add('hide');
@@ -157,6 +175,8 @@ function showImagePopup() {
 }
 
 function removeHomepageBioHide() {
+    guustoProductBrief.onmouseover = function () {}
+    guustoProductBrief.onmouseout = function () {}
     guustoBrief.onmouseover = function () {}
     guustoBrief.onmouseout = function () {}
     viaBrief.onmouseover = function () {}
