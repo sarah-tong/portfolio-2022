@@ -712,8 +712,8 @@ footer {
     & .brief-bio {
         font-family: 'Playfair Display', serif;
         font-weight: 900;
-        font-size: 4rem;
-//        line-height: 1.25;
+        font-size: 6.75vw;
+        line-height: 1.15;
         margin: 0;
         display: block;
 
@@ -725,7 +725,7 @@ footer {
     & .mobile-brief-bio {
         font-family: 'Playfair Display', serif;
         font-weight: 900;
-        font-size: 2.5rem;
+        font-size: 13.5vw;
         line-height: 1.25;
         display: none;
     }
@@ -1128,32 +1128,64 @@ body:not(#homepage) {
         font-size: 2rem;
     }
     
-    & .page-content > .container:nth-of-type(2) {
+    .container.bio {
         margin-bottom: 4rem;
-        width: 100%;
+        width: 90%;
         max-width: 62rem;
     }
     
-    & .page-content > .container:nth-of-type(3) {
-        margin-top: 0;
-        
-        & P {
-            font-size: 1.25rem;
-        }
-    }
+//    & .page-content > .container:nth-of-type(2) {
+//        margin-bottom: 4rem;
+//        width: 100%;
+//        max-width: 62rem;
+//    }
+//    
+//    & .page-content > .container:nth-of-type(3) {
+//        margin-top: 0;
+//        
+//        & P {
+//            font-size: 1.25rem;
+//        }
+//    }
 
     & .hello-banner {
         margin: 12rem auto 0;
 //        align-items: center;
         
         & p {
-//            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
         
         & [class*="col"]:last-of-type {
-            padding-right: 2rem;
+//            padding-right: 2rem;
         }
     }
+    
+    & .additional-facts {
+        margin-top: 5rem;
+            
+        & h1 {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        & p {
+            margin-top: 0;
+            display: flex;
+            font-size: 1.25rem;
+            
+            & span {
+                
+                & img {
+                    width: 2rem;
+                    height: auto;
+                    padding-right: 1rem;
+                    padding-top: 0.25rem;
+                }
+            }
+        }
+    }
+
     
     & .headshot-desktop {
         display: block;
@@ -1296,7 +1328,7 @@ body:not(#homepage) {
 
 @media (min-width: 1615px) {
     .hero-banner .brief-bio {
-        font-size: 4.75rem;
+        font-size: 6.75rem;
     }
 }
 
@@ -1335,7 +1367,7 @@ body:not(#homepage) {
 
         //        height: 50vh;
         .brief-bio {
-            font-size: 3.5rem;
+            font-size: 7.5vw;
         }
     }
     
@@ -1373,9 +1405,9 @@ body:not(#homepage) {
         }
     }
 
-    .hero-banner .brief-bio {
-        font-size: 3rem;
-    }
+//    .hero-banner .brief-bio {
+//        font-size: 3rem;
+//    }
 
     .project-carousel {
         margin: 0 1.5rem 0 0;
@@ -1586,7 +1618,7 @@ body:not(#homepage) {
         margin: 4.4375rem 0;
 
         & .brief-bio {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
         }
     }
 
@@ -1671,9 +1703,6 @@ body:not(#homepage) {
     }
     
     #about {
-        & .flex-wrapper {
-            flex-direction: column-reverse;  
-        }
         
         & .page-content > .container:nth-of-type(2) {
             margin-bottom: 1.5rem;
@@ -1681,6 +1710,8 @@ body:not(#homepage) {
         }
         
         & .hello-banner {
+            flex-direction: column-reverse; 
+            
             & p {
                 font-size: 1.25rem;
             }
@@ -1690,7 +1721,11 @@ body:not(#homepage) {
                 padding-bottom: 2rem;
             }
         }
-
+        
+        & .additional-facts h1 {
+            justify-content: flex-start;
+        }
+        
         
         & .page-content > .container:nth-of-type(3) P {
             font-size: 1rem;
@@ -1747,6 +1782,7 @@ body:not(#homepage) {
     .hero-banner {
         //        height: 35vh;
         height: calc(100vh - 4rem - 4.4375*2rem);
+        padding: 2rem 0 2rem 0 !important;
 
         & .brief-bio {
             display: none;

@@ -849,7 +849,8 @@ footer {
   .hero-banner .brief-bio {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 6.75vw;
+    line-height: 1.15;
     margin: 0;
     display: block; }
     .hero-banner .brief-bio.hide {
@@ -857,7 +858,7 @@ footer {
   .hero-banner .mobile-brief-bio {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 13.5vw;
     line-height: 1.25;
     display: none; }
 
@@ -1526,20 +1527,36 @@ body:not(#homepage) {
 #about h4 {
   font-size: 2rem; }
 
-#about .page-content > .container:nth-of-type(2) {
+#about .container.bio {
   margin-bottom: 4rem;
-  width: 100%;
+  width: 90%;
   max-width: 62rem; }
-
-#about .page-content > .container:nth-of-type(3) {
-  margin-top: 0; }
-  #about .page-content > .container:nth-of-type(3) P {
-    font-size: 1.25rem; }
 
 #about .hello-banner {
   margin: 12rem auto 0; }
-  #about .hello-banner [class*="col"]:last-of-type {
-    padding-right: 2rem; }
+  #about .hello-banner p {
+    font-size: 1.25rem; }
+
+#about .additional-facts {
+  margin-top: 5rem; }
+  #about .additional-facts h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  #about .additional-facts p {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.25rem; }
+    #about .additional-facts p span img {
+      width: 2rem;
+      height: auto;
+      padding-right: 1rem;
+      padding-top: 0.25rem; }
 
 #about .headshot-desktop {
   display: block; }
@@ -1700,7 +1717,7 @@ body:not(#homepage) {
 
 @media (min-width: 1615px) {
   .hero-banner .brief-bio {
-    font-size: 4.75rem; } }
+    font-size: 6.75rem; } }
 
 @media (min-width: 1480px) {
   #homepage .container, .nav-wrapper .container {
@@ -1720,7 +1737,7 @@ body:not(#homepage) {
   .intl-coop-image-popup.show img {
     width: 115%; }
   .hero-banner .brief-bio {
-    font-size: 3.5rem; }
+    font-size: 7.5vw; }
   .more-projects {
     max-width: 51rem; }
   #guusto-website .project-banner .img-wrapper img {
@@ -1744,8 +1761,6 @@ body:not(#homepage) {
   #homepage .container,
   .nav-wrapper .container {
     margin: 0 6rem; }
-  .hero-banner .brief-bio {
-    font-size: 3rem; }
   .project-carousel {
     margin: 0 1.5rem 0 0; } }
 
@@ -1876,7 +1891,7 @@ body:not(#homepage) {
   .hero-banner {
     margin: 4.4375rem 0; }
     .hero-banner .brief-bio {
-      font-size: 2.5rem; }
+      font-size: 3.5rem; }
   .flex-wrapper {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
@@ -1936,21 +1951,25 @@ body:not(#homepage) {
     flex-direction: column; }
   span.new {
     top: 0; }
-  #about .flex-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse; }
   #about .page-content > .container:nth-of-type(2) {
     margin-bottom: 1.5rem;
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content; }
-  #about .hello-banner p {
-    font-size: 1.25rem; }
-  #about .hello-banner [class*="col"]:last-of-type {
-    padding-right: 0rem;
-    padding-bottom: 2rem; }
+  #about .hello-banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    #about .hello-banner p {
+      font-size: 1.25rem; }
+    #about .hello-banner [class*="col"]:last-of-type {
+      padding-right: 0rem;
+      padding-bottom: 2rem; }
+  #about .additional-facts h1 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
   #about .page-content > .container:nth-of-type(3) P {
     font-size: 1rem; }
   #about .headshot-desktop {
@@ -1985,7 +2004,8 @@ body:not(#homepage) {
     display: -ms-flexbox;
     display: flex; }
   .hero-banner {
-    height: calc(100vh - 4rem - 4.4375*2rem); }
+    height: calc(100vh - 4rem - 4.4375*2rem);
+    padding: 2rem 0 2rem 0 !important; }
     .hero-banner .brief-bio {
       display: none; }
     .hero-banner .mobile-brief-bio {
