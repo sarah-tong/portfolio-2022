@@ -849,8 +849,8 @@ footer {
   .hero-banner .brief-bio {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 6.75vw;
-    line-height: 1.15;
+    font-size: 6vw;
+    line-height: 1;
     margin: 0;
     display: block; }
     .hero-banner .brief-bio.hide {
@@ -1522,7 +1522,8 @@ body:not(#homepage) {
 
 #about h1 {
   text-align: left;
-  margin: -0.75rem 0 2rem; }
+  margin: -0.75rem 0 2rem;
+  font-size: 2.8rem; }
 
 #about h4 {
   font-size: 2rem; }
@@ -1717,7 +1718,7 @@ body:not(#homepage) {
 
 @media (min-width: 1615px) {
   .hero-banner .brief-bio {
-    font-size: 6.75rem; } }
+    font-size: 5.5rem; } }
 
 @media (min-width: 1480px) {
   #homepage .container, .nav-wrapper .container {
@@ -1737,7 +1738,7 @@ body:not(#homepage) {
   .intl-coop-image-popup.show img {
     width: 115%; }
   .hero-banner .brief-bio {
-    font-size: 7.5vw; }
+    font-size: 7.25vw; }
   .more-projects {
     max-width: 51rem; }
   #guusto-website .project-banner .img-wrapper img {
