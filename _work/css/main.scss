@@ -1117,6 +1117,11 @@ body:not(#homepage) {
             box-shadow: 0 0 3rem rgba(0,0,0,.15);
         }
     }
+    
+    & .video-wrapper {
+        padding: 72.25% 0 0 0;
+        margin-bottom: 0.5rem;
+    }
 }
 
 
