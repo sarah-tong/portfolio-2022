@@ -532,6 +532,10 @@ section {
     .flex-wrapper & {
         margin: 0;
     }
+    
+    .flex-wrapper .half-img-fig-caption-wrapper & {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .video-wrapper {

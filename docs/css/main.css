@@ -692,6 +692,8 @@ section {
     cursor: -webkit-zoom-in; }
   .flex-wrapper .img-wrapper {
     margin: 0; }
+  .flex-wrapper .half-img-fig-caption-wrapper .img-wrapper {
+    margin-bottom: 1.5rem; }
 
 .video-wrapper {
   position: relative;

@@ -37,7 +37,7 @@ html(lang="en")
                 div(class="flex-wrapper")
                     div(class="col-60")
                         p Guusto is a Vancouver-based B2B SaaS startup aimed at helping companies build a culture of recognition and boost customer loyalty through their rewards and recognition platform. With Guusto, HR leaders, managers, colleagues, and business owners can express real-time appreciation to employees and customers through giving monetary and non-monetary recognition via digital gift cards and nominations respectively. Guusto strives to be the modern solution to existing recognition programs by relieving administrative work involved in using physical gift cards.
-                        p As the Senior Web Developer and Product Designer, I am primarily responsible for spearheading the design overhaul of the web platform and app through designing new features and iterating on the existing; creating a design system from the ground up; as well as user research and testing. This case study will only cover select product design work. To see my web design and development work, 
+                        p As the Senior Web Developer and Product Designer, I am primarily responsible for spearheading the design overhaul of the web platform and app through designing new features and iterating on the existing; creating a design system from the ground up; as well as user research and testing. To see my web design and development work, 
                             a(class="in-text-link" href="guusto-website.html") click here. 
                     div(class="col-40 project-summary")
                         h4 Type
@@ -135,54 +135,244 @@ html(lang="en")
 
             
             div(class="container")
-                h2 Automated Awards: Supercharging Recognition
+                h2 Process
                 
                 section
-                    p As this feature is not yet part of the mid-2021 launch, this feature is described in brief, however I would be more than happy to share in detail my process and wireframes.
+                    div(class="mockup-dropshadow-container")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/automated-awards.png" data-src="img/Guusto/automated-awards.png" data-action="zoom" alt="hi-fi of automated awards" class="blur lazyload")
+                    
+                    p Shoutouts is a redesign and improvement to Guusto’s past offering, the Nomination Box. The Nomination Box is positioned as a peer-to-peer program where employees can "nominate" or recognize their colleagues for a job well done, usually for reasons that align to company core values. It operates within a closed ecosystem. In other words, employees can only nominate others who are loaded into Guusto as paid Team Members. Shoutouts still supports a peer-to-peer program, but has more flexibility by offering top-down manager-to-employee recognition that goes beyond reinforcing core values as managers may now send a "shoutout" for a special occasion, such as a birthday wish. As well, it is more scalable in that managers may send non-monetary recognition to just about anyone inside and outside the Guusto system and accommodates individuals regardless of their level of access to the internet.
+
                     
                     div(class="mockup-dropshadow-container")
                         div(class="img-wrapper")
                             img(src="img/Guusto/automated-awards.png" data-src="img/Guusto/automated-awards.png" data-action="zoom" alt="hi-fi of automated awards" class="blur lazyload")
-                        figcaption Hi-fi wireframe of automated awards
+                        figcaption The Peer-to-Peer Nomination Box
           
                 
                 section
                     h3 Defining the Problem
                     
-                    p Employee milestones and anniversaries are common in employee recognition and come at regular cadences. We wanted to offer customers, especially the larger companies, a convenient way to “set it and forget it”.
+                    p As Guusto primarily serves small to mid-sized businesses with goals to scale up to support enterprise-level needs, its current offering for non-monetary recognition could not fulfill what enterprise clients were looking for. Specifically, 
+                        b top-down recognition was key to their recognition culture
+                        | . As well, HR leaders could not load everyone as Team Members as it would require knowing their emails to set up accounts within Guusto. 
+                        b A large proportion of employees, specifically the blue-collared workforce and contractors, do not have work emails. Others may not have personal emails and may even have limited internet access.
                     
-                    p While scheduling awards for milestones and anniversaries is possible in the platform, 
-                        b customers find Guusto’s automated awards limited to an extent and still very manual, requiring one to enter milestone dates and schedule frequently.
+                    br
+                    p I was tasked with:
+                    
+                    ul
+                        li How might we support customers who aren’t able to load everyone into Guusto as Team Members but still offer the ability to recognize them?
+                        li How might we accommodate employees who don’t have internet to still receive recognition?
+                        li How might we allow a manager to recognize an employee for performance that align to company core values but also acknowledge special occasions?
                         
                         
                 section
                     h3 Considerations and Constraints
                     
-                    p Prior to designing, things that were brought to my attention were:
+                    p In designing this new feature, the required specs were:
                     
                     ul
-                        li Pulling milestone & anniversary dates via HRIS integrations
-                        li Serving customers without an HRIS system
-                        li Giving visibility to current & upcoming anniversaries
-                        li Providing an option for non-monetary recognition
+                        li the ability to recognize anyone and not be restricted to just Team Members
+                        li the flexibility to email or print out recognition
+                        li to acknowledge individuals for birthdays, milestones, and other special occasions which aren’t considered company core values
+                        li the need to make it flexible and scalable for enterprise needs without jeopardizing current product offerings for existing users.
                         
                 section
-                    h3 Precedent Studies
+                    h3 Personas
                     
-                    div(class="img-wrapper")
-                        img(src="img/Guusto/automated-awards-precedent-study.png" data-src="img/Guusto/automated-awards-precedent-study.png" data-action="zoom" alt="Precendent study on competitor platforms" class="blur lazyload")
+                    div(class="multi-page-swiper-container")          
+                        div(id="rcp-personas")
+                            div(class="swiper-button-prev") &#8592;
+                            div(class="swiper-button-next") &#8594;
+                            div(class="swiper-wrapper")
+                                div(class="img-wrapper swiper-slide")
+                                    img(src="img/Guusto/shoutouts/Persona-Admin.png" alt="Admin persona")
+                                div(class="img-wrapper swiper-slide")
+                                    img(src="img/Guusto/shoutouts/Persona-Manager.png" alt="Manager persona")
+                                div(class="img-wrapper swiper-slide")
+                                    img(src="img/Guusto/shoutouts/Persona-Employee.png" alt="Employee persona")
+                            div(class="swiper-pagination") 
+
+                    p I created three personas based on what I heard anecdotally from my PMs about the different users this feature needed to serve.
+                
+                section
+                    h3 User Journey
                     
-                    p I reviewed competitor product’s user flows on how automated awards were set up, the kind of information required for an automation, as well as other notable features. Findings included:
+                    div(class="")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/shoutouts/user-journey.png" data-src="img/Guusto/shoutouts/user-journey.png" data-action="zoom" alt="user journey for Nom Box and for Shoutouts" class="blur lazyload")
+
+                    p The peer-to-peer journey is how the Nomination Box operated and worked best for white-collar, smaller workforces where the team size is easily manageable within Guusto. I mapped out a new journey of where we wanted to get to for larger enterprise workforces, being mindful that this feature needed to be accessible without relying on emails.
                     
-                    ul
-                        li Awards are sent based on hire and birth dates 
-                        li Ability to personalize standardized messages and assign values for certain years of service
-                        li Option to supplement or replace an annual award when a years of service award is set up
-                        li Email notifications of awards
-                        li Anniversaries are publicized in a feed
-                        li Dedicated celebrations section
-                        li Anniversaries, birthdays, onboarding new hires were common opportunities for automation
-           
+                    
+                section
+                    h3 Exploration
+                    
+                    h4 Positioning
+                    
+                    p Positioning involved two considerations: Defining the value proposition and how users will find and navigate to this new form of non-monetary recognition. For this new feature to not compete with our current Nomination Box, it needed to have a clearly defined purpose and be stripped down. Its value proposition was thus defined as a tool that allows managers to send top-down recognition with flexible delivery options, such that it can reach employees with and without access to the internet. It would also only have very simple reporting, as data can only be tracked for Team Members.
+                    
+                    br
+                    p For navigation, some options considered were:
+                    
+                    div(class="flex-wrapper align-items-center")
+                            div(class="col-50")
+                                div(class="mockup-dropshadow-container half-img-fig-caption-wrapper")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/separate-nav-item.png" data-src="img/Guusto/shoutouts/separate-nav-item.png" data-action="zoom" alt="Option 1: Separate Nav Item" class="blur lazyload")
+                                    figcaption Option 1: Separate Navigation Item
+                            
+                            div(class="col-50")
+                                p A separate navigation item: Customers can purchase it as a separate item from the Nomination Box and its value proposition can be easily differentiated standing as an independent feature. However, existing customers may flock to this new feature as it’s cheaper whereas we want greater emphasis on the peer-to-peer Nomination Box for these customers to help drive their recognition culture.
+                                
+                    div(class="flex-wrapper align-items-center")
+                            div(class="col-50")
+                                div(class="mockup-dropshadow-container half-img-fig-caption-wrapper")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/bundled.png" data-src="img/Guusto/shoutouts/bundled.png" data-action="zoom" alt="Option 2: Bundled" class="blur lazyload")
+                                    figcaption Option 2: Bundled
+                                    
+                            div(class="col-50")
+                                p Bundled together to offer a holistic non-monetary program: Creates more value by integrating both peer-to-peer and top-down recognition in one tool, however customers are forced to pay more for features they don’t need.
+                                
+                    div(class="flex-wrapper align-items-center")
+                            div(class="col-50")
+                                div(class="mockup-dropshadow-container half-img-fig-caption-wrapper")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/integrated.png" data-src="img/Guusto/shoutouts/integrated.png" data-action="zoom" alt="Option 3: Integrated" class="blur lazyload")
+                                    figcaption Option 3: Integrated
+                                    
+                            div(class="col-50")
+                                p Integrated together with the Nomination Box: One form to send recognition but would require making the existing Nomination Box an open ecosystem where a manager can send to any recipient. However, it might add complexity to the existing form and existing customers may reduce the number of paid Team Members.
+                    
+                    br
+                    p After gathering user feedback, the integrated option was preferred. It was simpler for users to do non-monetary recognition in one place. Despite the potential effect of existing customers reducing the number of paid Team Members and making the reporting less robust as data can only be tracked for Team Members, a communication strategy is to inform clients that by adding Team Members, they will gain more comprehensive reporting. Another insight was that it was unclear whether a recipient was a Team Member or non-Team Member. As well, jargon around the Nomination Box and Cheers (intended for acknowledging special occasions) was undefined.
+                    
+                section
+                    h3 Exploration
+                    
+                    h4 Clarity
+                    
+                    p With further exploration, I explored various options to differentiate between Team Member and Non-Team Member as well as between Nomination and Cheers. What needed to be made clear was that reporting can only be offered for Team Members on core value reasons. 
+                    
+                    br
+                    p Team Member vs. Non Team Member:
+                    
+                    div(class="flex-wrapper")
+                            div(class="col-50")
+                                div(class="")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/recipient-selector-1.png" data-src="img/Guusto/shoutouts/recipient-selector-1.png" data-action="zoom" alt="Recipient Selector" class="blur lazyload")
+                                        
+                                div(class="half-img-fig-caption-wrapper" style="margin-top: 1.5rem;")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/recipient-selector-2.png" data-src="img/Guusto/shoutouts/recipient-selector-2.png" data-action="zoom" alt="Recipient Selector" class="blur lazyload")
+                                    figcaption Option 1: Recipient Selector Dropdown
+                                    
+                            div(class="col-50")
+                                p A recipient selector to guide users to the different kinds of recipients you can send to
+                                
+                    div(class="flex-wrapper align-items-center")
+                            div(class="col-50")
+                                div(class="half-img-fig-caption-wrapper")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/open-ended-field.png" data-src="img/Guusto/shoutouts/open-ended-field.png" data-action="zoom" alt="Open Ended Field" class="blur lazyload")
+                                    figcaption Option 2: Open-Ended Field
+                            div(class="col-50")
+                                p An open-ended field where Team Members and Non-Team Members would be differentiated visually. A user could recognize both kinds of recipients at the same time.
+                                
+                    
+                    p Nomination vs. Cheers:
+                    
+                    div(class="flex-wrapper align-items-center")
+                            div(class="col-50")
+                                div(class="half-img-fig-caption-wrapper")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/reason-mode-selector.png" data-src="img/Guusto/shoutouts/reason-mode-selector.png" data-action="zoom" alt="Reason Mode Toggle" class="blur lazyload")
+                                    figcaption Option 1: Reason Mode Toggle
+                            div(class="col-50")
+                                p A toggle with two different reasons to choose from the get-go where Nominations would feature a leaderboard and Cheers would not. It was important to not let, for example, a large amount of birthday wishes be sent to a popular individual to skew leaderboard stats which are intended to drive core values. 
+                                
+                    div(class="flex-wrapper align-items-center")
+                            div(class="col-50")
+                                div(class="half-img-fig-caption-wrapper")
+                                    div(class="img-wrapper")
+                                        img(src="img/Guusto/shoutouts/one-inclusive-dropdown.png" data-src="img/Guusto/shoutouts/one-inclusive-dropdown.png" data-action="zoom" alt="One Inclusive Dropdown" class="blur lazyload")
+                                    figcaption Option 2: One Inclusive Dropdown
+                            div(class="col-50")
+                                p A single dropdown inclusive of all reasons but informing users that the leaderboard only tracks core value reasons.
+
+                    br
+                    p Following a round of user feedback, the consensus was to not make users think who was a Team Member or not, and also not choose between a Nomination or Cheers. 
+                        b Differentiating was important, but users didn’t want to be overloaded with too many decisions when recognizing someone.
+                
+            
+            div(class="container")
+                h2 The Outcome
+                
+                section
+                    p The Nomination Box underwent a redesign overhaul to what is now called Shoutouts. It continues to offer a peer-to-peer recognition program where an employee may "nominate" or recognize their colleague for a job well done or congratulate them for a special occasion. It also offers Managers the ability to recognize or celebrate just about anyone regardless of what level of internet access they may have.
+                
+                section
+                    h3 An Open Ecosystem
+                    
+                    div(class="mockup-dropshadow-container")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/automated-awards.png" data-src="img/Guusto/automated-awards.png" data-action="zoom" alt="hi-fi of automated awards" class="blur lazyload")
+                        figcaption Sending a shoutout to a Team Member and non-Team Member
+                    
+                    p Managers can simultaneously recognize Team Members and non-Team Members. There are a number of visual cues to help differentiate the two types of recipients a manager may send to. As well, when recognizing non-Team Members, a bar appears to inform whose data is tracked.
+                    
+                    
+                section
+                    h3 Recognize and Celebrate
+                    
+                    div(class="mockup-dropshadow-container")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/automated-awards.png" data-src="img/Guusto/automated-awards.png" data-action="zoom" alt="hi-fi of automated awards" class="blur lazyload")
+                        figcaption Choosing a core and celebration reason
+                    
+                    p Recognizing someone for a core reason and celebrating someone for a special occasion is differentiated through icons that permeate not only in the dropdown selection, but in the recent activity, as well as the leaderboard. The shoutout preview also changes depending on which of the two reason types are selected.  When “Include Celebrations” is toggled on, the count for any shoutouts with celebration reasons will be added on top of the core value numbers. A dedicated leaderboard for celebration reasons is not offered as improving employee performance, engagement, and retention should be driven by reinforcing company core values.
+                    
+                section
+                    h3 Delivery Options
+                    
+                    div(class="mockup-dropshadow-container")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/automated-awards.png" data-src="img/Guusto/automated-awards.png" data-action="zoom" alt="hi-fi of automated awards" class="blur lazyload")
+                        figcaption Option to choose between email or print
+                    
+                    p Managers have flexible delivery options depending if they know the recipient email. For recipients that don’t have an email or have limited internet access, managers can give a print out to them directly in a more formalized manner versus communicating recognition verbally.
+                    
+                    
+                section
+                    h3 Reason Set Up
+                    
+                    div(class="mockup-dropshadow-container")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/shoutouts/Team-Settings-Shoutouts-v2.png" data-src="img/Guusto/shoutouts/Team-Settings-Shoutouts-v2.png" data-action="zoom" alt="Admin setup for core and celebration reasons" class="blur lazyload")
+                        figcaption Admin setup for core and celebration reasons 
+                    
+                    p HR Leaders are given guidance on the back end to help them understand what core values and celebrations mean for the leaderboard and more importantly for recognition culture.
+                    
+                section
+                    h3 Reporting
+                    
+                    div(class="mockup-dropshadow-container")
+                        div(class="img-wrapper")
+                            img(src="img/Guusto/automated-awards.png" data-src="img/Guusto/automated-awards.png" data-action="zoom" alt="hi-fi of automated awards" class="blur lazyload")
+                        figcaption Admin setup for core and celebration reasons 
+                    
+                    p Reporting hasn’t departed too much from what we offer currently except having an additional filter to see core reason or celebration reason specific data if desired. As usual, only Team Member data is tracked
+                    
+                 
+            div(class="container")
+                h2 Challenges
+                    
+                section
+                    p The main challenge encountered was the potential cannibalization of the current Nomination Box feature by offering a “lite” and cheaper version as customers wouldn’t need to pay per Team Member. In light of  iterations and user feedback, the solution to merge it into one non-monetary program will hopefully mean capturing a bigger share of the market of differing needs that the niche peer-to-peer Nomination Box couldn’t fulfill previously. While this feature has not yet been released, we hope to see greater adoption of our non-monetary recognition offering and more sending activity as some of the measures for success.
             
             div(class="container")
                 h2 Reflection
