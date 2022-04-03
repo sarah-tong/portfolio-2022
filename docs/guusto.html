@@ -11,7 +11,13 @@
 
 <style>
 
-body {
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+    
+    body {
 
 	background-image: url('grunge_patterns.jpg');
 	background-attachment: fixed;
@@ -20,7 +26,9 @@ body {
 
 .box {
 	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+/*	background: rgba(101, 101, 101, 0.7); */
+    margin: auto; 
+    padding: 1rem;
 }
 
 .lightbox {
@@ -49,21 +57,6 @@ div.vertical {
 	width: 100%;
 }
 
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
 </style>
 
 <body>
@@ -72,8 +65,37 @@ div.vertical {
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">
-					<input style="margin: 16px; text-align: left;" id="password" type="password" placeholder="Password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
+                    <span style="font-size: 1.5rem;padding-bottom: 0.25rem;display: block;">&#129323;</span>
+                    <h3 style="font-weight: 100; color: white;">This content is password protected</h3>
+					<input id="password" type="password" placeholder="Password" /> <br />
+<!--					<button id="loginbutton" type="button">Enter</button>-->
+                    
+                    
+                    <div class="buttons">
+                      <button class="blob-btn" id="loginbutton" type="button">
+                        Enter
+                        <span class="blob-btn__inner">
+                          <span class="blob-btn__blobs">
+                            <span class="blob-btn__blob"></span>
+                            <span class="blob-btn__blob"></span>
+                            <span class="blob-btn__blob"></span>
+                            <span class="blob-btn__blob"></span>
+                          </span>
+                        </span>
+                      </button>
+                      <br/>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="height: 0; width: 0;">
+                      <defs>
+                        <filter id="goo">
+                          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                        </filter>
+                      </defs>
+                    </svg>
+                        
+                    
 					<p id="wrongPassword" style="display: none">Please try again</p>
 				</div>
 			</div>
