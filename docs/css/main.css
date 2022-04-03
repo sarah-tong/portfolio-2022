@@ -462,6 +462,35 @@ span.quote-person {
 section {
   margin-bottom: 5rem; }
 
+button {
+  color: #ED534C; }
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+  color: red; }
+
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: red;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: red;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: red; }
+
+*::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red; }
+
+*::placeholder {
+  /* modern browser */
+  color: red; }
+
 .container {
   position: relative;
   width: 50%;
