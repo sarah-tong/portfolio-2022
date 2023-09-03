@@ -1701,7 +1701,7 @@ body:not(#homepage) {
 #about .hello-banner {
   margin: 12rem auto 0; }
   #about .hello-banner p {
-    font-size: 1.25rem; }
+    font-size: 1rem; }
 
 #about .additional-facts {
   margin-top: 5rem; }
