@@ -1,0 +1,108 @@
+doctype html
+html(lang="en")
+    // WEBSITE CODED BY SARAH
+    // SARAH FUELED BY SNACKS
+    head
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-115290530-1')
+        script.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-115290530-1');
+        
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(charset="utf-8")
+
+        title Sarah Tong - Guusto - Product Design
+        
+        link(rel="shortcut icon" href="favicon.ico")
+        link(rel="stylesheet" href="../css/swiper.css")
+        link(rel="stylesheet" href="../css/main.css")
+
+    body(id="guusto-product")
+                 
+        div(class="page-content animate-bottom")
+        
+            include nav-inactive.pug
+
+            div(class="full-width-container")
+                div(class="project-banner")
+                    div(class="img-wrapper")
+                        img(src="../img/Guusto/guusto-card.png" alt="guusto gift card")
+
+            div(class="container introduction")
+                div(class="project-header")
+                    h1 Guusto
+                    p Web Platform
+                div(class="flex-wrapper")
+                    div(class="col-60")
+                        p 
+                            a(class="in-text-link" href="www.guusto.com") Guusto
+                            |  is a Vancouver-based B2B SaaS startup with a mission to help build a culture of recognition and boost customer loyalty through their rewards and recognition platform. With Guusto, HR leaders, managers, colleagues, and business owners can express real-time appreciation to employees and customers through giving monetary rewards via digital gift cards and non-monetary nominations. Guusto strives to be the modern solution to existing recognition programs by relieving administrative work involved in using physical gift cards. 
+                        p As the Senior Product Designer, I am primarily responsible for spearheading the design overhaul of the web platform and app through designing new features and iterating on the existing; creating a design system from the ground up; user research and testing; coordinating with Marketing & Sales departments to create visual design assets and prototypes; and managing and mentoring interns. This case study will cover the transformation of one Guusto’s primary offerings, the Nomination Box, into what is now called Shoutouts. To see my web design and development work, 
+                            a(class="in-text-link" href="../guusto-website.html") click here. 
+                    div(class="col-40 project-summary")
+                        h4 Type
+                        p Full-Time
+                        h4 Role
+                        p Product Design, User Research &amp; Testing, Web Design, Front-End Web Development, Management
+                        h4 Tools
+                        p Figma, HTML/CSS/Javascript, Bootstrap, Illustrator, Photoshop
+                        h4 Duration
+                        p August 2020 - Present
+                        
+            
+            div(class="container")                
+                h2 Shoutouts
+                
+                section
+                    div(class="video-wrapper-w-caption")
+                        div(class="video-wrapper")
+                            video(controls disablepictureinpicture preload controlsList="nodownload")
+                                    source(src="../video/Guusto/shoutouts/shoutouts-final-trimmed2.mp4" type="video/mp4")
+                        figcaption Shoutouts is a peer-to-peer and top-down non-monetary recognition tool
+                    
+                    p Shoutouts is a redesign and improvement to Guusto’s past offering, the Nomination Box. The Nomination Box is positioned as a peer-to-peer program where employees can "nominate" or recognize their colleagues for a job well done, usually for reasons that align to company core values. It operates within a closed ecosystem. In other words, employees can only nominate others who are loaded into Guusto as paid Team Members. Shoutouts still supports a peer-to-peer program, but has more flexibility by offering top-down manager-to-employee recognition that goes beyond reinforcing core values as managers may now send a "shoutout" for a special occasion, such as a birthday wish. As well, it is more scalable in that managers may send non-monetary recognition to just about anyone inside and outside the Guusto system and accommodates individuals regardless of their level of access to the internet.
+
+                    br
+                    div(class="video-wrapper-w-caption")
+                        div(class="video-wrapper")
+                            video(controls disablepictureinpicture preload controlsList="nodownload")
+                                    source(src="../video/Guusto/shoutouts/nom-box-trimmed2.mp4" type="video/mp4")
+                        figcaption The peer-to-peer Nomination Box
+          
+
+            div(class="container")
+                h2 Reflection
+                section
+                    p Redesigning the platform is a daunting yet exhilarating endeavour, especially when I began as a team of 1. While I enjoy having accountability and ownership over product direction, what came with it was learning how to balance multiple stakeholder’s needs and interests. There were prospective customers looking for features, new customers signing large contracts and making their requests, existing customers to retain, a product roadmap to address, Engineering time to respect, departmental feedback, my own convictions in good design principles, and more recently, emphasizing with my intern and helping them navigate ambiguity and tradeoffs. Simultaneously, it is invigorating to distill the problem and abstractions, entertain and abandon possibilities, and put it together and present a concrete vision. Working at a start-up has been truly eye-opening as it has amplified ambiguity and the need to embrace the bigger picture. You could say I appreciate Guusto.
+                    
+            div(class="container more-projects")
+                h4 More Projects
+                div(class="more-project-link-wrapper")
+                    a(class="more-project-link active-link" href="../guusto.html") Guusto: Product
+                    a(class="more-project-link" href="../guusto-website.html") Guusto: Website
+                    a(class="more-project-link" href="../via-rail.html") VIA Rail
+                    a(class="more-project-link" href="../toyota.html") Toyota
+                    a(class="more-project-link" href="../royal-city-physio.html") Royal City Physio
+                    a(class="more-project-link" href="../railyard.html") Railyard
+                    a(class="more-project-link" href="../knack.html") Knack Academics
+                    a(class="more-project-link" href="../international-coop.html") International Co-op
+            
+            div(class="container")
+                include footer.pug
+                    
+        script(src="../js/lazysizes.min.js")
+        script.
+            document.addEventListener('DOMContentLoaded', function () {
+            var pageAnimation = setTimeout(showPage, 1000);
+
+            function showPage() {
+                document.querySelector(".page-content").classList.add('show');
+                }
+            });
+        script(src="../js/jquery-3.3.1.min.js")
+        script(src="../js/transition.min.js")
+        script(src="../js/zoom.min.js")
+        script(src="../js/swiper.min.js")
+        script(src="../js/swiper-initialize.js")
